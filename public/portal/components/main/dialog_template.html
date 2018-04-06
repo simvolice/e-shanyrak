@@ -1,0 +1,78 @@
+<md-dialog class="fullscreen-dialog" aria-label="Создать смарт - контракт">
+
+
+
+
+
+
+
+        <md-toolbar class="md-toolbar-tools">
+
+                <h2 style="color: white">Создать смарт - контракт</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="closeDialog()" aria-label="Отмена">
+                    <i class="fa fa-window-close"></i>
+                </md-button>
+
+        </md-toolbar>
+
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+
+
+                <div class="row">
+                    <div class="col-md-12">
+
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Наименование контракта</label>
+                            <input ng-model="data.nameContract">
+                        </md-input-container>
+
+
+                        <md-input-container>
+                            <label>Выберите организацию для заключения договора</label>
+
+                            <md-select ng-model="data.selectOrg">
+
+                                <md-option ng-repeat="y in data.allOrgs" ng-value="y.name">
+                                    {{y.name}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </md-dialog-content>
+
+
+
+
+    <md-dialog-actions layout="row">
+
+        <span flex></span>
+        <md-button class="md-raised md-primary" ng-click="saveContract()">
+            Сохранить
+        </md-button>
+
+        <md-button class="md-raised md-primary" ng-click="closeDialog()" aria-label="Отмена">
+            Отмена
+        </md-button>
+
+    </md-dialog-actions>
+
+
+
+</md-dialog>

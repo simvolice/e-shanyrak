@@ -1,0 +1,62 @@
+<md-dialog class="fullscreen-dialog" aria-label="Создать смарт - контракт">
+
+
+
+
+
+
+
+        <md-toolbar class="md-toolbar-tools">
+
+                <h2 style="color: white">Просмотр данных смарт - контракта</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="closeDialog()" aria-label="Отмена">
+                    <i class="fa fa-window-close"></i>
+                </md-button>
+
+        </md-toolbar>
+
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+
+
+                <div class="row">
+                    <div class="col-md-12" ng-repeat="data in data">
+
+
+
+
+                     <h6>{{data.modelRusForData}}: <strong>{{data.value}}</strong></h6>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </md-dialog-content>
+
+
+
+
+    <md-dialog-actions layout="row">
+
+
+
+        <md-button class="md-raised md-primary" ng-click="closeDialog()" aria-label="Отмена">
+            Отмена
+        </md-button>
+
+    </md-dialog-actions>
+
+
+
+</md-dialog>
