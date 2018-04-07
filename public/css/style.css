@@ -11,6 +11,12 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 */
 
+
+html {
+    overflow-x: hidden;
+
+}
+
 hr, p {
     margin-bottom: 1.5rem
 }
@@ -4558,5 +4564,4 @@ li.flex-active-slide.progression_studios_animate_right .progression-studios-slid
     z-index: 9999;
 
 }
-
 

@@ -61,16 +61,66 @@ app.filter('ruFormat', function() {
 
 app.controller('MainCtrl', function ($scope, $state, $timeout, $translate, $rootScope, $window) {
 
-
-
-
-
-
-
-
-
-
     $rootScope.fio = localStorage.getItem("fio");
+
+    $scope.arrRole = [];
+
+    let arrMenuForRolesUser = [
+
+
+        {state: "main", title: "Мои смарт контракты", icon: "fa-file-alt"},
+        {state: "myhouse", title: "Мой дом", icon: "fa-home"},
+        {state: "myflat", title: "Моя квартира", icon: "fa-tv"},
+        {state: "greencontract", title: "Зеленый контракт", icon: "fa-leaf"},
+
+
+
+
+    ];
+
+
+    let arrMenuForRolesKSK = [
+
+
+        {state: "mainksk", title: "Мои смарт контракты"},
+        {state: "controlksk", title: "Контроль и мониторинг"}
+
+
+
+    ];
+
+
+    let arrMenuForRolesSem = [
+
+
+        {state: "mainsem", title: "Мои смарт контракты"},
+        {state: "controlsem", title: "Расход ресурсов"},
+        {state: "analyticssem", title: "Анализ данных"},
+
+
+
+    ];
+
+    let arrMenuForRolesGos = [
+
+
+        {state: "maingos", title: "Анализ данных"}
+
+
+    ];
+
+
+
+
+    if (localStorage.getItem("role") === "user"){
+
+
+        $scope.arrRole = arrMenuForRolesUser;
+
+
+
+    }
+
 
 
 
@@ -81,6 +131,7 @@ app.controller('MainCtrl', function ($scope, $state, $timeout, $translate, $root
         localStorage.removeItem('sessionToken');
         localStorage.removeItem('fio');
         localStorage.removeItem('address');
+        localStorage.removeItem('role');
 
 
         window.location.replace("/");

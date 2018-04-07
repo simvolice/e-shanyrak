@@ -68,7 +68,7 @@ router.post('/auth', async(req, res, next) => {
 
 
 
-            res.json({"code": 0, "address": result.address, "fio": result.fio, "sessionToken": jsonwebtoken.sign(result._id.toString(), process.env.SECRETJSONWEBTOKEN)});
+            res.json({"code": 0, "address": result.address, "role": result.role, "fio": result.fio, "sessionToken": jsonwebtoken.sign(result._id.toString(), process.env.SECRETJSONWEBTOKEN)});
 
 
         }else {

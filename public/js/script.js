@@ -187,6 +187,7 @@ jQuery(document).ready(function($) {
         		localStorage.setItem("sessionToken", data.sessionToken);
         		localStorage.setItem("address", data.address);
         		localStorage.setItem("fio", data.fio);
+        		localStorage.setItem("role", data.role);
 
                 window.location.replace("/portal/#!/main");
 

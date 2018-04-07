@@ -1,0 +1,147 @@
+<div class="row" ng-controller="greencontractCtrl">
+
+
+
+    <div class="col-md-12">
+
+        <md-card>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="title text-center" style="text-transform: uppercase; margin-top: 10px">Зеленый контракт</h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <md-tabs md-dynamic-height md-border-bottom>
+                        <md-tab label="Мои лимиты">
+                            <md-content class="md-padding">
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <md-card>
+                                            <md-card-title>
+                                                <md-card-title-text>
+                                                    <span class="md-headline">Создать новый лимит</span>
+
+                                                </md-card-title-text>
+
+
+
+
+                                            </md-card-title>
+
+
+
+                                            <div class="row" style="margin-left: 20px">
+
+                                                <div class="col-md-6">
+                                                    <md-input-container class="md-block" flex-gt-sm>
+                                                        <label>Лимит на электроэнергию</label>
+                                                        <input ng-model="data.electro">
+                                                    </md-input-container>
+
+                                                    <md-input-container class="md-block" flex-gt-sm>
+                                                        <label>Лимит на холодную воду</label>
+                                                        <input ng-model="data.watercold">
+                                                    </md-input-container>
+
+
+                                                    <md-input-container class="md-block" flex-gt-sm>
+                                                        <label>Лимит на горячую воду</label>
+                                                        <input ng-model="data.waterhot">
+                                                    </md-input-container>
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <md-card-actions layout="row">
+                                                <md-button class="md-raised md-primary">Сохранить</md-button>
+
+                                            </md-card-actions>
+
+                                        </md-card>
+                                    </div>
+
+
+
+                                    <div class="col-md-6">
+                                        <md-card>
+                                            <md-card-title>
+                                                <md-card-title-text>
+                                                    <span class="md-headline">Мои текущее лимиты:</span>
+
+                                                </md-card-title-text>
+
+
+
+
+                                            </md-card-title>
+
+
+                                            <div style="margin-left: 20px">
+
+
+                                                <h6 class="title">Электроэнергия: 500 квт/ч</h6>
+                                                <h6 class="title">Холодная вода: 500 м3</h6>
+                                                <h6 class="title">Горячая вода: 500 м3</h6>
+
+
+
+                                            </div>
+
+
+
+                                        </md-card>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+
+                            </md-content>
+                        </md-tab>
+
+                    </md-tabs>
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </md-card>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

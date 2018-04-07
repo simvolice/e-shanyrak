@@ -39,6 +39,7 @@ module.exports = {
                         pass: bcrypt.hashSync(objParams.pass, 10),
 
                         address: objParams.address,
+                        role: "user",
 
 
 

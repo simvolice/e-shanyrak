@@ -33,9 +33,36 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 
 
+      .state('myhouse', {
+          url: '/myhouse',
+          templateUrl: 'components/myhouse/myHouseView.html',
+
+
+      })
+
+
+      .state('myflat', {
+          url: '/myflat',
+          templateUrl: 'components/myflat/myFlatView.html',
+
+
+      })
 
 
 
+      .state('greencontract', {
+          url: '/greencontract',
+          templateUrl: 'components/greencontract/greencontractView.html',
+
+
+      })
+
+      .state('myprofile', {
+          url: '/myprofile',
+          templateUrl: 'components/myprofile/myProfileView.html',
+
+
+      })
 
 
 

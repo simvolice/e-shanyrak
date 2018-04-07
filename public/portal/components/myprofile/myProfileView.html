@@ -1,0 +1,181 @@
+<div class="row" ng-controller="myProfileCtrl">
+
+    <div class="col-md-12">
+
+
+        <md-tabs md-dynamic-height md-border-bottom>
+            <md-tab label="Общая информация">
+                <md-content class="md-padding">
+
+
+                    <div class="row">
+
+                        <div class="col-12  col-lg-3">
+                            <div id="account-edit-photo">
+                                <div><img src="assets/img/user.png" alt="Account Image"></div>
+                                <p><a ui-sref="myprofile" class="btn btn-green-pro">Изменить фотографию профиля</a></p>
+                                <p><a ui-sref="myprofile" class="btn">Удалить фотографию</a></p>
+                            </div>
+                        </div><!-- close .col -->
+                        <div class="col">
+
+                            <form class="account-settings-form">
+
+                                <h5>Общая информация</h5>
+                                <p class="small-paragraph-spacing">Заполните свой профиль однажды, чтобы было легче заключать смарт - контракты</p>
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="first-name" class="col-form-label">Имя:</label>
+                                            <input type="text" class="form-control" id="first-name">
+                                        </div>
+                                    </div><!-- close .col -->
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="last-name" class="col-form-label">Фамилия:</label>
+                                            <input type="text" class="form-control" id="last-name">
+                                        </div>
+                                    </div><!-- close .col -->
+
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="th-name" class="col-form-label">Отчество:</label>
+                                            <input type="text" class="form-control" id="th-name">
+                                        </div>
+                                    </div><!-- close .col -->
+
+
+                                </div><!-- close .row -->
+                                <hr>
+
+                                <h5>Информация о профиле</h5>
+                                <p class="small-paragraph-spacing">Вы можете изменить свой email здесь.</p>
+
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="e-mail" class="col-form-label">E-mail</label>
+                                            <input type="text" class="form-control" id="e-mail">
+                                        </div>
+                                    </div><!-- close .col -->
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <div><label for="button-change" class="col-form-label">&nbsp; &nbsp;</label></div>
+                                            <a href="dashboard-account.html#!" class="btn btn-form">Изменить email</a>
+                                        </div>
+                                    </div><!-- close .col -->
+
+                                </div><!-- close .row -->
+
+                                <hr>
+                                <h5>Изменить пароль</h5>
+                                <p class="small-paragraph-spacing">Вы можете изменить свой пароль здесь.</p>
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="password" class="col-form-label">Текущей пароль:</label>
+                                            <input type="text" class="form-control" id="password" value="&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;">
+                                        </div>
+                                    </div><!-- close .col -->
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="new-password" class="col-form-label">Новый пароль:</label>
+                                            <input type="text" class="form-control" id="new-password" placeholder="Минимум 8 символов">
+                                        </div>
+                                    </div><!-- close .col -->
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <div><label for="confirm-password" class="col-form-label">&nbsp; &nbsp;</label></div>
+                                            <input type="text" class="form-control" id="confirm-password" placeholder="Повторите пароль">
+                                        </div>
+                                    </div><!-- close .col -->
+                                </div><!-- close .row -->
+
+                                <div class="clearfix"></div>
+                                <hr>
+                                <p><a href="dashboard-account.html" class="btn btn-green-pro">Сохранить изменения</a></p>
+                                <br>
+                            </form>
+
+                        </div><!-- close .col -->
+
+                    </div>
+
+
+
+
+
+                </md-content>
+            </md-tab>
+            <md-tab label="Информация о Вашей подписке">
+                <md-content class="md-padding">
+
+                    <h5>Текущий тариф</h5>
+
+                    <div class="current-plan-account">
+
+                        <div class="row">
+                            <div class="col-md">
+                                <h4>Начинающей</h4>
+                                <h2><sup>Тенге</sup>1000<span> / месяц</span></h2>
+                            </div><!-- close .col-sm -->
+                            <div class="col-md">
+                                <h5>Возможности тарифа:</h5>
+                                <ul>
+                                    <li>Реклама на нашем портале</li>
+                                    <li>Аналитика данных</li>
+                                </ul>
+                            </div><!-- close .col-sm -->
+                            <div class="col-md">
+                                <p class="small-paragraph-spacing"><a ui-sref="myprofile" class="btn btn-green-pro">Изменить тариф</a></p>
+                                <p><a ui-sref="myprofile" class="btn">История Ваших платежей</a></p>
+                            </div><!-- close .col-sm -->
+                            <div class="col-md">
+
+                            </div><!-- close .col-sm -->
+                        </div><!-- close .row -->
+
+                        <div class="current-plan-billing">Следующие списание за тариф, будет произведено 5 июля, 2018 года.</div>
+                        <div class="clearfix"></div>
+                    </div><!-- close .current-plan-account -->
+
+                    <hr>
+                    <h5>Метод оплаты</h5>
+                    <div class="row payment-method-container">
+                        <div class="col-md">
+                            <div class="right-border-payment">
+                                <p class="small-paragraph-spacing"><img src="../images/demo/credit-card.jpg" alt="Credit Card"></p>
+                                <p class="small-paragraph-spacing"><a ui-sref="myprofile" class="btn">Редактировать карту</a></p>
+                                <p><a ui-sref="myprofile" class="btn"><i class="fas fa-plus"></i> Добавить новый метод</a></p>
+                            </div>
+                        </div><!-- close .col -->
+                        <div class="col-md">
+                            <h6>Расскажи друзьям</h6>
+                            <p>Получите <strong>1 месяц бесплатного использования</strong></p>
+                            <p><a ui-sref="myprofile" class="btn btn-green-pro">Рассказать друзьям</a></p>
+                        </div><!-- close .col -->
+                    </div><!-- close .row -->
+
+                    <hr>
+
+                    <p><a ui-sref="myprofile" class="btn">Отменить мою подписку</a></p>
+
+
+                </md-content>
+            </md-tab>
+
+        </md-tabs>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>

@@ -8,7 +8,7 @@ angular.module('app').controller('HomePageCtrl', function ($scope, $mdDialog, $m
 
     var web3 = new Web3('http://localhost:8545');
 
-    const testABI = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"propforsaves","outputs":[{"name":"number_contract","type":"uint256"},{"name":"iin_udv_ispolnitel","type":"string"},{"name":"iin_udv_zakazchika","type":"string"},{"name":"name_org","type":"string"},{"name":"address_org","type":"string"},{"name":"number_schet_org","type":"string"},{"name":"bank_org","type":"string"},{"name":"name_contract","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_address","type":"address"},{"name":"_number_contract","type":"uint256"},{"name":"_iin_udv_ispolnitel","type":"string"},{"name":"_iin_udv_zakazchika","type":"string"},{"name":"_name_org","type":"string"},{"name":"_address_org","type":"string"},{"name":"_number_schet_org","type":"string"},{"name":"_bank_org","type":"string"},{"name":"_name_contract","type":"string"}],"name":"setInstructor","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}];
+    const testABI = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"propforsaves","outputs":[{"name":"jsStringifyObject","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_address","type":"address"}],"name":"getDatajsStringifyObject","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_address","type":"address"},{"name":"_jsStringifyObject","type":"string"}],"name":"setDatajsStringifyObject","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}];
     abiDecoder.addABI(testABI);
 
 
@@ -47,10 +47,15 @@ angular.module('app').controller('HomePageCtrl', function ($scope, $mdDialog, $m
 
 
 
-        const decodedData = abiDecoder.decodeMethod(txInput);
+
+           let decodeHex = abiDecoder.decodeMethod(txInput);
 
 
-        return decodedData.params;
+           return decodeHex.params;
+
+
+
+
 
 
 
@@ -84,6 +89,9 @@ angular.module('app').controller('HomePageCtrl', function ($scope, $mdDialog, $m
     $scope.view = function (txHash, ev) {
 
 
+
+
+
         $("#videohead-pro").css("z-index", 50);
 
         $mdDialog.show({
@@ -108,35 +116,11 @@ angular.module('app').controller('HomePageCtrl', function ($scope, $mdDialog, $m
 
         web3.eth.getTransaction(txHash)
             .then(function (objTx) {
-                $scope.data = decodeDataFromTransaction(objTx.input);
-
-                $scope.modelRusForData = [
-                    "Ваш адрес внутри сети блокчейн",
-                    "Номер контракта",
-                    "ИНН УДВ. исполнителя",
-                    "ИНН УДВ. заказчика",
-                    "Имя компании",
-                    "Адрес компании",
-                    "Счет компании",
-                    "Банк компании",
-                    "Имя контракта"
-                ];
 
 
 
 
-
-
-                for (let [index, itemObjInputTx] of $scope.data.entries()) {
-
-
-                    itemObjInputTx["modelRusForData"] = $scope.modelRusForData[index];
-
-
-
-                }
-
-
+              $scope.data = JSON.parse(decodeDataFromTransaction(objTx.input)[1].value);
 
 
 
@@ -169,9 +153,25 @@ angular.module('app').controller('HomePageCtrl', function ($scope, $mdDialog, $m
 
         $scope.data = {
 
+
+            dataForBlackChain: {},
             selectOrg: "",
             nameContract: "",
-            allOrgs: [{_id: 0, name: "Энерго компания"}, {_id: 1, name: "Вода компания"}]
+            allOrgs: [
+
+                {_id: 0, name: "Астанаэнергосбыт"},
+
+
+                {_id: 1, name: "Астана-Тазарту"},
+                {_id: 2, name: "Астана газ сервис"},
+                {_id: 3, name: "Астана су арнасы"},
+                {_id: 4, name: "Лифтовые службы в г. Астана"},
+                {_id: 5, name: "Клининговая компания"},
+
+
+
+
+                ]
 
 
         };
@@ -202,7 +202,7 @@ angular.module('app').controller('HomePageCtrl', function ($scope, $mdDialog, $m
 
 
             //TODO Всегда надо диплоить контракт, чтобы забрать адрес
-            var newContractInstance = new web3.eth.Contract([{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"propforsaves","outputs":[{"name":"number_contract","type":"uint256"},{"name":"iin_udv_ispolnitel","type":"string"},{"name":"iin_udv_zakazchika","type":"string"},{"name":"name_org","type":"string"},{"name":"address_org","type":"string"},{"name":"number_schet_org","type":"string"},{"name":"bank_org","type":"string"},{"name":"name_contract","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_address","type":"address"},{"name":"_number_contract","type":"uint256"},{"name":"_iin_udv_ispolnitel","type":"string"},{"name":"_iin_udv_zakazchika","type":"string"},{"name":"_name_org","type":"string"},{"name":"_address_org","type":"string"},{"name":"_number_schet_org","type":"string"},{"name":"_bank_org","type":"string"},{"name":"_name_contract","type":"string"}],"name":"setInstructor","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}], "0xC2D3d78dC289D24F0942Dc9fe37aFffF7c04fb83", {
+            var newContractInstance = new web3.eth.Contract([{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"propforsaves","outputs":[{"name":"jsStringifyObject","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_address","type":"address"}],"name":"getDatajsStringifyObject","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_address","type":"address"},{"name":"_jsStringifyObject","type":"string"}],"name":"setDatajsStringifyObject","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}], "0x991f6c686227be66999e8e542ddd8D28c5e49Bcf", {
                 from: web3.eth.defaultAccount,
                 gasPrice: '0',
                 gas: 1500000,
@@ -222,9 +222,38 @@ angular.module('app').controller('HomePageCtrl', function ($scope, $mdDialog, $m
 
 
 
+            $scope.data.dataForBlackChain = {
+
+                name_contract: $scope.data.nameContract,
+                number_contract: 1515,
+
+                name_uslugi: "Тестовая услуга",
 
 
-            newContractInstance.methods.setInstructor(localStorage.getItem("address"), 1111, "Test1", "Test2", $scope.data.selectOrg, "Test4", "Test5", "Test6", $scope.data.nameContract).send()
+                iin_udv_zakazchika: "890712350030",
+                fio_zakazchika: "Иванов Иван Иванович",
+
+                address_zakazchika: "Республика Казахстан, 010000 г. Астана, ул. Тельмана, 55",
+                udv_create_org: "МВД РК",
+                udv_create_date: "13.04.2012",
+                udv_number: "033200972",
+
+
+
+
+                name_org : $scope.data.selectOrg,
+                address_org: "Республика Казахстан, 010000 г. Астана, ул. Мира, 55",
+                bin_ispolnitel: "161040023528",
+                bank_name_org: "ДБ АО Тестовый Банк",
+                iik_ispolnitel: "KZ44914012203KZ003U6"
+
+
+            };
+
+
+
+
+            newContractInstance.methods.setDatajsStringifyObject(localStorage.getItem("address"), JSON.stringify($scope.data.dataForBlackChain)).send()
                 .then(saveTransactionHashToDB);
 
 
@@ -232,6 +261,8 @@ angular.module('app').controller('HomePageCtrl', function ($scope, $mdDialog, $m
 
 
         }
+
+
 
 
         function saveTransactionHashToDB(resultObj) {
