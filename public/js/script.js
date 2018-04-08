@@ -189,7 +189,21 @@ jQuery(document).ready(function($) {
         		localStorage.setItem("fio", data.fio);
         		localStorage.setItem("role", data.role);
 
-                window.location.replace("/portal/#!/main");
+
+
+        		if (data.role === "gos") {
+
+
+                    window.location.replace("/portal/#!/maingos");
+				} else {
+
+                    window.location.replace("/portal/#!/main");
+
+				}
+
+
+
+
 
 			} else  {
 

@@ -64,6 +64,32 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
       })
 
+      .state('controlksk', {
+          url: '/controlksk',
+          templateUrl: 'components/controlksk/controlKSKView.html',
 
 
+      })
+
+      .state('controlsem', {
+          url: '/controlsem',
+          templateUrl: 'components/controlsem/controlsemView.html',
+
+
+      })
+
+
+      .state('analyticssem', {
+          url: '/analyticssem',
+          templateUrl: 'components/analyticssem/analyticssemView.html',
+
+
+      })
+
+      .state('maingos', {
+          url: '/maingos',
+          templateUrl: 'components/maingos/maingosView.html',
+
+
+      })
 });

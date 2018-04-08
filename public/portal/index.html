@@ -12,9 +12,10 @@
 	<link rel="stylesheet" href="../icons/fontawesome/css/fontawesome-all.min.css"><!-- FontAwesome Icons -->
 	<link rel="stylesheet" href="../icons/Iconsmind__Ultimate_Pack/Line&#32;icons/styles.min.css"><!-- iconsmind.com Icons -->
 	<link rel="stylesheet" href="../icons/FlatIcons/flaticon.css"><!-- iconsmind.com Icons -->
+	<link rel="stylesheet" href="assets/css/billboard.min.css"><!-- iconsmind.com Icons -->
 
 
-	<title>Е-Шанырак</title>
+	<title>E-SHANYRAQ</title>
 </head>
 <body ng-controller="MainCtrl">
 <div id="sidebar-bg">
@@ -135,8 +136,8 @@
 			</div><!-- close #header-user-profile-click -->
 			<div id="header-user-profile-menu">
 				<ul>
-					<li><a ui-sref="myprofile"><span class="icon-User"></span>Мой профиль</a></li>
-					<li><a href="#"><span class="icon-Life-Safer"></span>Помощь</a></li>
+					<li><a href="" ng-click="goToProfile()"><span class="icon-User"></span>Мой профиль</a></li>
+					<li><a href="" ng-click="goToProfile()"><span class="icon-Life-Safer"></span>Помощь</a></li>
 					<li><a href="#" ng-click="exitClk()"><span class="icon-Power-3"></span>Выйти</a></li>
 				</ul>
 			</div><!-- close #header-user-profile-menu -->
@@ -151,9 +152,9 @@
 				<h3>Уведомления</h3>
 				<div id="header-notification-menu-padding">
 					<ul id="header-user-notification-list">
-						<li><a href="#">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. <div class="header-user-notify-time">21 час назад</div></a></li>
-						<li><a href="#">Donec vitae lacus id arcu molestie mollis. <div class="header-user-notify-time">3 дня назад</div></a></li>
-						<li><a href="#">Aenean vitae lectus non purus facilisis imperdiet. <div class="header-user-notify-time">5 дней назад</div></a></li>
+						<li><a href="" ng-click="goToProfile()">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. <div class="header-user-notify-time">21 час назад</div></a></li>
+						<li><a href="" ng-click="goToProfile()">Donec vitae lacus id arcu molestie mollis. <div class="header-user-notify-time">3 дня назад</div></a></li>
+						<li><a href="" ng-click="goToProfile()">Aenean vitae lectus non purus facilisis imperdiet. <div class="header-user-notify-time">5 дней назад</div></a></li>
 					</ul>
 					<div class="clearfix"></div>
 				</div><!-- close #header-user-profile-menu -->
@@ -257,6 +258,7 @@
 <script src="assets/js/angular-aria.min.js"></script>
 <script src="assets/js/angular-messages.min.js"></script>
 <script src="assets/js/angular-material.min.js"></script>
+<script src="assets/js/billboard.pkgd.min.js"></script>
 <script src="app.module.js"></script>
 <script src="app.routes.js"></script>
 
@@ -271,6 +273,14 @@
 <script src="components/greencontract/greencontractService.js"></script>
 <script src="components/myprofile/myProfileController.js"></script>
 <script src="components/myprofile/myProfileService.js"></script>
+<script src="components/controlksk/controlKSKController.js"></script>
+<script src="components/controlksk/controlKSKService.js"></script>
+<script src="components/controlsem/controlsemController.js"></script>
+<script src="components/controlsem/controlsemService.js"></script>
+<script src="components/analyticssem/analyticssemController.js"></script>
+<script src="components/analyticssem/analyticssemService.js"></script>
+<script src="components/maingos/maingosController.js"></script>
+<script src="components/maingos/maingosService.js"></script>
 
 
 <!-- Additional Plugins and JavaScript -->

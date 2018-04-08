@@ -82,8 +82,8 @@ app.controller('MainCtrl', function ($scope, $state, $timeout, $translate, $root
     let arrMenuForRolesKSK = [
 
 
-        {state: "mainksk", title: "Мои смарт контракты"},
-        {state: "controlksk", title: "Контроль и мониторинг"}
+        {state: "main", title: "Мои смарт контракты", icon: "fa-file-alt"},
+        {state: "controlksk", title: "Контроль и мониторинг", icon: "fa-database"}
 
 
 
@@ -93,9 +93,9 @@ app.controller('MainCtrl', function ($scope, $state, $timeout, $translate, $root
     let arrMenuForRolesSem = [
 
 
-        {state: "mainsem", title: "Мои смарт контракты"},
-        {state: "controlsem", title: "Расход ресурсов"},
-        {state: "analyticssem", title: "Анализ данных"},
+        {state: "main", title: "Мои смарт контракты", icon: "fa-file-alt"},
+        {state: "controlsem", title: "Расход ресурсов", icon: "fa-money-bill-alt"},
+        {state: "analyticssem", title: "Анализ данных", icon: "fa-database"},
 
 
 
@@ -104,7 +104,7 @@ app.controller('MainCtrl', function ($scope, $state, $timeout, $translate, $root
     let arrMenuForRolesGos = [
 
 
-        {state: "maingos", title: "Анализ данных"}
+        {state: "maingos", title: "Анализ данных", icon: "fa-database"}
 
 
     ];
@@ -119,8 +119,37 @@ app.controller('MainCtrl', function ($scope, $state, $timeout, $translate, $root
 
 
 
+    } else if(localStorage.getItem("role") === "ksk") {
+
+
+        $scope.arrRole = arrMenuForRolesKSK;
+
+
+
+    } else if (localStorage.getItem("role") === "sem") {
+
+        $scope.arrRole = arrMenuForRolesSem;
+
+
+
+    }else if (localStorage.getItem("role") === "gos") {
+
+        $scope.arrRole = arrMenuForRolesGos;
+
+
+
     }
 
+
+
+    $scope.goToProfile = function(){
+
+
+        $("#header-user-profile").removeClass("active");
+        $("#header-user-notification").removeClass("active");
+        $state.go("myprofile");
+
+    };
 
 
 

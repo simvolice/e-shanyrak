@@ -1,0 +1,539 @@
+<div class="row" ng-controller="controlsemCtrl">
+
+
+
+    <div class="col-md-12">
+
+        <md-card>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="title text-center" style="text-transform: uppercase; margin-top: 10px">Расход ресурсов</h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <h6 class="title text-center">Выработка и отпуск тепловой энергии</h6>
+
+
+                    <style id="2017_Б-05-02-Г теплоснабжение_13986_Styles">
+                        <!--table
+                        {mso-displayed-decimal-separator:"\,";
+                            mso-displayed-thousand-separator:" ";}
+                        .xl1513986
+                        {padding-top:1px;
+                            padding-right:1px;
+                            padding-left:1px;
+                            mso-ignore:padding;
+                            color:black;
+                            font-size:11.0pt;
+                            font-weight:400;
+                            font-style:normal;
+                            text-decoration:none;
+                            font-family:Calibri, sans-serif;
+                            mso-font-charset:204;
+                            mso-number-format:General;
+                            text-align:general;
+                            vertical-align:bottom;
+                            mso-background-source:auto;
+                            mso-pattern:auto;
+                            white-space:nowrap;}
+                        .xl6313986
+                        {padding-top:1px;
+                            padding-right:1px;
+                            padding-left:1px;
+                            mso-ignore:padding;
+                            color:black;
+                            font-size:11.0pt;
+                            font-weight:400;
+                            font-style:normal;
+                            text-decoration:none;
+                            font-family:Calibri, sans-serif;
+                            mso-font-charset:204;
+                            mso-number-format:General;
+                            text-align:general;
+                            vertical-align:bottom;
+                            mso-background-source:auto;
+                            mso-pattern:auto;
+                            white-space:normal;}
+                        .xl6413986
+                        {padding-top:1px;
+                            padding-right:1px;
+                            padding-left:1px;
+                            mso-ignore:padding;
+                            color:black;
+                            font-size:8.0pt;
+                            font-weight:700;
+                            font-style:normal;
+                            text-decoration:none;
+                            font-family:Calibri, sans-serif;
+                            mso-font-charset:204;
+                            mso-number-format:General;
+                            text-align:left;
+                            vertical-align:bottom;
+                            mso-background-source:auto;
+                            mso-pattern:auto;
+                            white-space:normal;}
+                        .xl6513986
+                        {padding-top:1px;
+                            padding-right:1px;
+                            padding-left:1px;
+                            mso-ignore:padding;
+                            color:black;
+                            font-size:8.0pt;
+                            font-weight:400;
+                            font-style:normal;
+                            text-decoration:none;
+                            font-family:Calibri, sans-serif;
+                            mso-font-charset:204;
+                            mso-number-format:General;
+                            text-align:center;
+                            vertical-align:middle;
+                            border:.5pt solid windowtext;
+                            mso-background-source:auto;
+                            mso-pattern:auto;
+                            white-space:normal;}
+                        .xl6613986
+                        {padding-top:1px;
+                            padding-right:1px;
+                            padding-left:1px;
+                            mso-ignore:padding;
+                            color:black;
+                            font-size:8.0pt;
+                            font-weight:400;
+                            font-style:normal;
+                            text-decoration:none;
+                            font-family:Calibri, sans-serif;
+                            mso-font-charset:204;
+                            mso-number-format:General;
+                            text-align:center;
+                            vertical-align:middle;
+                            border-top:.5pt solid windowtext;
+                            border-right:none;
+                            border-bottom:.5pt solid windowtext;
+                            border-left:.5pt solid windowtext;
+                            mso-background-source:auto;
+                            mso-pattern:auto;
+                            white-space:normal;}
+                        .xl6713986
+                        {padding-top:1px;
+                            padding-right:1px;
+                            padding-left:1px;
+                            mso-ignore:padding;
+                            color:black;
+                            font-size:8.0pt;
+                            font-weight:400;
+                            font-style:normal;
+                            text-decoration:none;
+                            font-family:Calibri, sans-serif;
+                            mso-font-charset:204;
+                            mso-number-format:General;
+                            text-align:left;
+                            vertical-align:bottom;
+                            mso-background-source:auto;
+                            mso-pattern:auto;
+                            white-space:normal;}
+                        .xl6813986
+                        {padding-top:1px;
+                            padding-right:1px;
+                            padding-left:1px;
+                            mso-ignore:padding;
+                            color:black;
+                            font-size:8.0pt;
+                            font-weight:400;
+                            font-style:normal;
+                            text-decoration:none;
+                            font-family:Calibri, sans-serif;
+                            mso-font-charset:204;
+                            mso-number-format:General;
+                            text-align:left;
+                            vertical-align:bottom;
+                            border-top:none;
+                            border-right:none;
+                            border-bottom:.5pt solid windowtext;
+                            border-left:none;
+                            mso-background-source:auto;
+                            mso-pattern:auto;
+                            white-space:normal;}
+                        .xl6913986
+                        {padding-top:1px;
+                            padding-right:1px;
+                            padding-left:1px;
+                            mso-ignore:padding;
+                            color:black;
+                            font-size:8.0pt;
+                            font-weight:400;
+                            font-style:normal;
+                            text-decoration:none;
+                            font-family:Calibri, sans-serif;
+                            mso-font-charset:204;
+                            mso-number-format:General;
+                            text-align:general;
+                            vertical-align:bottom;
+                            mso-background-source:auto;
+                            mso-pattern:auto;
+                            white-space:normal;}
+                        .xl7013986
+                        {padding-top:1px;
+                            padding-right:1px;
+                            padding-left:1px;
+                            mso-ignore:padding;
+                            color:black;
+                            font-size:8.0pt;
+                            font-weight:400;
+                            font-style:normal;
+                            text-decoration:none;
+                            font-family:Calibri, sans-serif;
+                            mso-font-charset:204;
+                            mso-number-format:"\#\,\#\#0\.0";
+                            text-align:right;
+                            vertical-align:bottom;
+                            mso-background-source:auto;
+                            mso-pattern:auto;
+                            white-space:normal;}
+                        .xl7113986
+                        {padding-top:1px;
+                            padding-right:1px;
+                            padding-left:1px;
+                            mso-ignore:padding;
+                            color:black;
+                            font-size:8.0pt;
+                            font-weight:400;
+                            font-style:normal;
+                            text-decoration:none;
+                            font-family:Calibri, sans-serif;
+                            mso-font-charset:204;
+                            mso-number-format:"\#\,\#\#0\.0";
+                            text-align:right;
+                            vertical-align:bottom;
+                            border-top:none;
+                            border-right:none;
+                            border-bottom:.5pt solid windowtext;
+                            border-left:none;
+                            mso-background-source:auto;
+                            mso-pattern:auto;
+                            white-space:normal;}
+                        .xl7213986
+                        {padding-top:1px;
+                            padding-right:1px;
+                            padding-left:1px;
+                            mso-ignore:padding;
+                            color:black;
+                            font-size:8.0pt;
+                            font-weight:400;
+                            font-style:normal;
+                            text-decoration:none;
+                            font-family:Calibri, sans-serif;
+                            mso-font-charset:204;
+                            mso-number-format:General;
+                            text-align:center;
+                            vertical-align:middle;
+                            border-top:.5pt solid windowtext;
+                            border-right:.5pt solid windowtext;
+                            border-bottom:.5pt solid windowtext;
+                            border-left:none;
+                            mso-background-source:auto;
+                            mso-pattern:auto;
+                            white-space:normal;}
+                        -->
+                    </style>
+
+
+
+                    <!--[if !excel]>&nbsp;&nbsp;<![endif]-->
+                    <!--Следующие сведения были подготовлены мастером публикации веб-страниц
+                    Microsoft Excel.-->
+                    <!--При повторной публикации этого документа из Excel все сведения между тегами
+                    DIV будут заменены.-->
+                    <!----------------------------->
+                    <!--НАЧАЛО ФРАГМЕНТА ПУБЛИКАЦИИ МАСТЕРА ВЕБ-СТРАНИЦ EXCEL -->
+                    <!----------------------------->
+
+                    <div id="2017_Б-05-02-Г теплоснабжение_13986" align=center
+                         x:publishsource="Excel">
+
+                        <table border=1 cellpadding=0 cellspacing=0 width=943 style='border-collapse:
+ collapse;table-layout:fixed;width:709pt'>
+                            <col width=213 style='mso-width-source:userset;mso-width-alt:7789;width:160pt'>
+                            <col width=105 style='mso-width-source:userset;mso-width-alt:3840;width:79pt'>
+                            <col width=108 style='mso-width-source:userset;mso-width-alt:3949;width:81pt'>
+                            <col width=98 style='mso-width-source:userset;mso-width-alt:3584;width:74pt'>
+                            <col width=101 style='mso-width-source:userset;mso-width-alt:3693;width:76pt'>
+                            <col width=105 style='mso-width-source:userset;mso-width-alt:3840;width:79pt'>
+                            <col width=112 style='mso-width-source:userset;mso-width-alt:4096;width:84pt'>
+                            <col width=101 style='mso-width-source:userset;mso-width-alt:3693;width:76pt'>
+                            <tr class=xl6313986 height=20 style='height:15.0pt'>
+                                <td rowspan=4 height=95 class=xl7213986 width=213 style='height:71.25pt;
+  width:160pt'>Наименование области</td>
+                                <td rowspan=2 class=xl6513986 width=105 style='width:79pt'>&#1256;ндірілгені,
+                                    барлы&#1171;ы</td>
+                                <td colspan=3 class=xl6513986 width=307 style='border-left:none;width:231pt'>Одан</td>
+                                <td rowspan=2 class=xl6513986 width=105 style='width:79pt'>Босатыл&#1171;аны,
+                                    барлы&#1171;ы</td>
+                                <td colspan=2 class=xl6513986 width=213 style='border-left:none;width:160pt'>Одан</td>
+                            </tr>
+                            <tr class=xl6313986 height=30 style='height:22.5pt'>
+                                <td height=30 class=xl6513986 width=108 style='height:22.5pt;border-top:none;
+  border-left:none;width:81pt'>жылу электр станцияларымен</td>
+                                <td class=xl6513986 width=98 style='border-top:none;border-left:none;
+  width:74pt'>&#1179;азанды&#1179;тармен</td>
+                                <td class=xl6513986 width=101 style='border-top:none;border-left:none;
+  width:76pt'>&#1257;згелер</td>
+                                <td class=xl6513986 width=112 style='border-top:none;border-left:none;
+  width:84pt'>жылу электр станцияларымен</td>
+                                <td class=xl6613986 width=101 style='border-top:none;border-left:none;
+  width:76pt'>&#1179;азанды&#1179;тармен</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td rowspan=2 height=45 class=xl6513986 width=105 style='height:33.75pt;
+  border-top:none;width:79pt'>Выработано, всего</td>
+                                <td colspan=3 class=xl6513986 width=307 style='border-left:none;width:231pt'>Из
+                                    них</td>
+                                <td rowspan=2 class=xl6513986 width=105 style='border-top:none;width:79pt'>Отпущено,
+                                    всего</td>
+                                <td colspan=2 class=xl6513986 width=213 style='border-left:none;width:160pt'>Из
+                                    них</td>
+                            </tr>
+                            <tr class=xl6913986 height=30 style='height:22.5pt'>
+                                <td height=30 class=xl6513986 width=108 style='height:22.5pt;border-top:none;
+  border-left:none;width:81pt'>тепловыми электростанциями</td>
+                                <td class=xl6513986 width=98 style='border-top:none;border-left:none;
+  width:74pt'>котельными</td>
+                                <td class=xl6513986 width=101 style='border-top:none;border-left:none;
+  width:76pt'>прочее</td>
+                                <td class=xl6513986 width=112 style='border-top:none;border-left:none;
+  width:84pt'>тепловыми электростанциями</td>
+                                <td class=xl6613986 width=101 style='border-top:none;border-left:none;
+  width:76pt'>котельными</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td height=15 class=xl6413986 width=213 style='height:11.25pt;width:160pt'>&#1178;аза&#1179;стан
+                                    Республикасы</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>82 039,9</td>
+                                <td class=xl7013986 width=108 style='width:81pt'>51 280,1</td>
+                                <td class=xl7013986 width=98 style='width:74pt'>24 927,7</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>5 832,1</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>63 965,6</td>
+                                <td class=xl7013986 width=112 style='width:84pt'>25 380,1</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>17 496,8</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td height=15 class=xl6713986 width=213 style='height:11.25pt;width:160pt'>А&#1179;мола</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>3 228,4</td>
+                                <td class=xl7013986 width=108 style='width:81pt'>x</td>
+                                <td class=xl7013986 width=98 style='width:74pt'>x</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>-</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>2 449,3</td>
+                                <td class=xl7013986 width=112 style='width:84pt'>x</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>1 930,7</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td height=15 class=xl6713986 width=213 style='height:11.25pt;width:160pt'>А&#1179;т&#1257;бе</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>5 446,8</td>
+                                <td class=xl7013986 width=108 style='width:81pt'>x</td>
+                                <td class=xl7013986 width=98 style='width:74pt'>2 739,9</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>x</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>3 559,1</td>
+                                <td class=xl7013986 width=112 style='width:84pt'>1 761,7</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>1 797,4</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td height=15 class=xl6713986 width=213 style='height:11.25pt;width:160pt'>Алматы</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>1 550,1</td>
+                                <td class=xl7013986 width=108 style='width:81pt'>99,1</td>
+                                <td class=xl7013986 width=98 style='width:74pt'>x</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>x</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>1 223,7</td>
+                                <td class=xl7013986 width=112 style='width:84pt'>94,1</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>1 129,6</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td height=15 class=xl6713986 width=213 style='height:11.25pt;width:160pt'>Атырау</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>3 791,6</td>
+                                <td class=xl7013986 width=108 style='width:81pt'>x</td>
+                                <td class=xl7013986 width=98 style='width:74pt'>x</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>-</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>2 401,0</td>
+                                <td class=xl7013986 width=112 style='width:84pt'>1 256,0</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>1 145,0</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td height=15 class=xl6713986 width=213 style='height:11.25pt;width:160pt'>Батыс
+                                    &#1178;аза&#1179;стан</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>2 844,1</td>
+                                <td class=xl7013986 width=108 style='width:81pt'>x</td>
+                                <td class=xl7013986 width=98 style='width:74pt'>x</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>-</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>995,9</td>
+                                <td class=xl7013986 width=112 style='width:84pt'>760,0</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>235,9</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td height=15 class=xl6713986 width=213 style='height:11.25pt;width:160pt'>Жамбыл</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>1 912,5</td>
+                                <td class=xl7013986 width=108 style='width:81pt'>573,7</td>
+                                <td class=xl7013986 width=98 style='width:74pt'>1 338,8</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>-</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>871,1</td>
+                                <td class=xl7013986 width=112 style='width:84pt'>318,8</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>552,3</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td height=15 class=xl6713986 width=213 style='height:11.25pt;width:160pt'>&#1178;ара&#1171;анды</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>11 828,1</td>
+                                <td class=xl7013986 width=108 style='width:81pt'>9 497,9</td>
+                                <td class=xl7013986 width=98 style='width:74pt'>2 330,2</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>-</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>6 812,9</td>
+                                <td class=xl7013986 width=112 style='width:84pt'>1 111,0</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>1 360,1</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td height=15 class=xl6713986 width=213 style='height:11.25pt;width:160pt'>&#1178;останай</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>4 207,8</td>
+                                <td class=xl7013986 width=108 style='width:81pt'>2 448,7</td>
+                                <td class=xl7013986 width=98 style='width:74pt'>1 759,1</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>-</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>3 085,1</td>
+                                <td class=xl7013986 width=112 style='width:84pt'>1 595,9</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>1 489,2</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td height=15 class=xl6713986 width=213 style='height:11.25pt;width:160pt'>&#1178;ызылорда</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>621,2</td>
+                                <td class=xl7013986 width=108 style='width:81pt'>436,5</td>
+                                <td class=xl7013986 width=98 style='width:74pt'>184,7</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>-</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>438,3</td>
+                                <td class=xl7013986 width=112 style='width:84pt'>310,1</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>128,2</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td height=15 class=xl6713986 width=213 style='height:11.25pt;width:160pt'>Ма&#1187;&#1171;ыстау</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>7 340,9</td>
+                                <td class=xl7013986 width=108 style='width:81pt'>x</td>
+                                <td class=xl7013986 width=98 style='width:74pt'>578,8</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>x</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>1 491,1</td>
+                                <td class=xl7013986 width=112 style='width:84pt'>x</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>395,2</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td height=15 class=xl6713986 width=213 style='height:11.25pt;width:160pt'>О&#1187;т&#1199;стік
+                                    &#1178;аза&#1179;стан</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>1 416,8</td>
+                                <td class=xl7013986 width=108 style='width:81pt'>x</td>
+                                <td class=xl7013986 width=98 style='width:74pt'>x</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>-</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>725,5</td>
+                                <td class=xl7013986 width=112 style='width:84pt'>174,9</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>108,2</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td height=15 class=xl6713986 width=213 style='height:11.25pt;width:160pt'>Павлодар</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>13 941,5</td>
+                                <td class=xl7013986 width=108 style='width:81pt'>x</td>
+                                <td class=xl7013986 width=98 style='width:74pt'>x</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>x</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>4 969,5</td>
+                                <td class=xl7013986 width=112 style='width:84pt'>999,1</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>428,8</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td height=15 class=xl6713986 width=213 style='height:11.25pt;width:160pt'>Солт&#1199;стік
+                                    &#1178;аза&#1179;стан</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>2 236,7</td>
+                                <td class=xl7013986 width=108 style='width:81pt'>x</td>
+                                <td class=xl7013986 width=98 style='width:74pt'>x</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>-</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>3 512,8</td>
+                                <td class=xl7013986 width=112 style='width:84pt'>x</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>321,3</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td height=15 class=xl6713986 width=213 style='height:11.25pt;width:160pt'>Шы&#1171;ыс<span
+                                        style='mso-spacerun:yes'>  </span>&#1178;аза&#1179;стан</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>7 849,2</td>
+                                <td class=xl7013986 width=108 style='width:81pt'>4 052,5</td>
+                                <td class=xl7013986 width=98 style='width:74pt'>2 912,0</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>884,7</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>7 680,6</td>
+                                <td class=xl7013986 width=112 style='width:84pt'>3 627,4</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>3 901,3</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt'>
+                                <td height=15 class=xl6713986 width=213 style='height:11.25pt;width:160pt'>Астана
+                                    &#1179;аласы</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>6 102,6</td>
+                                <td class=xl7013986 width=108 style='width:81pt'>x</td>
+                                <td class=xl7013986 width=98 style='width:74pt'>x</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>-</td>
+                                <td class=xl7013986 width=105 style='width:79pt'>11 142,3</td>
+                                <td class=xl7013986 width=112 style='width:84pt'>x</td>
+                                <td class=xl7013986 width=101 style='width:76pt'>69,8</td>
+                            </tr>
+                            <tr class=xl6913986 height=15 style='height:11.25pt; '>
+                                <td height=15 class=xl6813986 width=213 style='height:11.25pt;width:160pt; border: 1px solid grey'>Алматы
+                                    &#1179;аласы</td>
+                                <td class=xl7113986 width=105 style='width:79pt; border: 1px solid grey'>7 721,6</td>
+                                <td class=xl7113986 width=108 style='width:81pt; border: 1px solid grey'>4 727,0</td>
+                                <td class=xl7113986 width=98 style='width:74pt; border: 1px solid grey'>2 994,6</td>
+                                <td class=xl7113986 width=101 style='width:76pt; border: 1px solid grey'>-</td>
+                                <td class=xl7113986 width=105 style='width:79pt; border: 1px solid grey'>12 607,4</td>
+                                <td class=xl7113986 width=112 style='width:84pt; border: 1px solid grey'>x</td>
+                                <td class=xl7113986 width=101 style='width:76pt; border: 1px solid grey'>2 503,8</td>
+                            </tr>
+
+                            <![if supportMisalignedColumns]>
+                            <tr height=0 style='display:none'>
+                                <td width=213 style='width:160pt'></td>
+                                <td width=105 style='width:79pt'></td>
+                                <td width=108 style='width:81pt'></td>
+                                <td width=98 style='width:74pt'></td>
+                                <td width=101 style='width:76pt'></td>
+                                <td width=105 style='width:79pt'></td>
+                                <td width=112 style='width:84pt'></td>
+                                <td width=101 style='width:76pt'></td>
+                            </tr>
+                            <![endif]>
+                        </table>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </md-card>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
