@@ -4128,7 +4128,7 @@ li.flex-active-slide.progression_studios_animate_right .progression-studios-slid
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-    #header-user-notification, #masthead-pro .btn-header-pro, #sidebar-bg:after, #sidebar-bg:before, #site-navigation-pro, #video-logo-background:after, #video-logo-background:before, #video-search-header, nav#sidebar-nav {
+    #masthead-pro .call-link, #header-user-notification, #masthead-pro .btn-header-pro, #sidebar-bg:after, #sidebar-bg:before, #site-navigation-pro, #video-logo-background:after, #video-logo-background:before, #video-search-header, nav#sidebar-nav {
         display: none
     }
 
@@ -4276,7 +4276,7 @@ li.flex-active-slide.progression_studios_animate_right .progression-studios-slid
 }
 
 @media only screen and (max-width: 767px) {
-    #content-sidebar-pro:after, #header-user-notification, #header-user-profile #header-username, #masthead-pro .btn-header-pro, #sidebar-bg:after, #sidebar-bg:before, #site-navigation-pro, #video-logo-background:after, #video-logo-background:before, #video-search-header, nav#sidebar-nav {
+    #content-sidebar-pro:after, #header-user-notification, #header-user-profile #header-username, #masthead-pro .btn-header-pro, #masthead-pro .call-link, #sidebar-bg:after, #sidebar-bg:before, #site-navigation-pro, #video-logo-background:after, #video-logo-background:before, #video-search-header, nav#sidebar-nav {
         display: none
     }
 
@@ -4411,7 +4411,7 @@ li.flex-active-slide.progression_studios_animate_right .progression-studios-slid
     }
 
     .progression-studios-slider-mobile-background-cover, .progression-studios-slider-mobile-background-cover-dark {
-        opacity: 1
+        opacity: 0
     }
 
     .flexslider.progression-studios-slider, .progression-studios-slider-image-background {
@@ -4565,3 +4565,9 @@ li.flex-active-slide.progression_studios_animate_right .progression-studios-slid
 
 }
 
+@media only screen and (max-width: 767px){.modal-body-pro .registration-social-login-container, .registration-social-login-container {
+    margin-left: 0;
+}
+
+
+}
