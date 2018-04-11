@@ -92,4 +92,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 
       })
+
+      .state('maincms', {
+          url: '/maincms',
+          templateUrl: 'components/maincms/maincmsView.html',
+
+
+      })
 });

@@ -1,0 +1,53 @@
+
+<div ng-controller="dynamicPageCtrl">
+
+
+
+    <div class="row" >
+
+
+
+        <div class="col-md-12">
+            <div class="ql-editor" ng-bind-html="postHTML">
+
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+
+
+            <h6 style="margin-left: 30px">Дата публикации: {{data.createAt | date : "dd.MM.y"}}</h6>
+            <h6 style="margin-left: 30px">Прикрепленные файлы:
+
+
+                <md-chips>
+
+
+                <md-chip ng-repeat="data in data.urlImg"><a href="{{data}}" target="_blank">{{data}}</a></md-chip>
+
+
+            </md-chips>
+
+            </h6>
+
+
+        </div>
+
+    </div>
+</div>

@@ -11,7 +11,7 @@ const dbConnect = require('./utils/ConnectDB');
 
 let bodyParser = require('body-parser');
 const AuthService = require('./service/AuthService');
-
+const MenuService = require('./service/MenuService');
 let index = require('./routes/index');
 
 let app = express();
@@ -20,9 +20,9 @@ let app = express();
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json({limit: '1000mb'}));
+app.use(bodyParser.json({limit: "1000mb"}));
+app.use(bodyParser.urlencoded({extended: false}));
+
 app.use(express.static(path.join(__dirname, 'public')));
 fsExtra.ensureDirSync(path.join(__dirname, 'public/uploads/'));
 
@@ -53,6 +53,8 @@ async function initApp() {
 
 
 
+
+    await MenuService.createCappedCollection();
 
 
 

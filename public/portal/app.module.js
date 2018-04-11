@@ -110,7 +110,13 @@ app.controller('MainCtrl', function ($scope, $state, $timeout, $translate, $root
     ];
 
 
+    let arrMenuForRolesCms = [
 
+
+        {state: "maincms", title: "Работа над сайтом", icon: "fa-edit"}
+
+
+    ];
 
     if (localStorage.getItem("role") === "user"){
 
@@ -135,6 +141,12 @@ app.controller('MainCtrl', function ($scope, $state, $timeout, $translate, $root
     }else if (localStorage.getItem("role") === "gos") {
 
         $scope.arrRole = arrMenuForRolesGos;
+
+
+
+    }else if (localStorage.getItem("role") === "cms") {
+
+        $scope.arrRole = arrMenuForRolesCms;
 
 
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="land">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,6 +24,8 @@
 
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="portal/assets/css/angular-material.min.css">
+		<link rel="stylesheet" href="portal/assets/css/quill.snow.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMontserrat:300,400,600,700">
 		
 		<link rel="stylesheet" href="icons/fontawesome/css/fontawesome-all.min.css"><!-- FontAwesome Icons -->
@@ -31,18 +33,34 @@
 		
 		<title>E-SHANYRAQ</title>
 	</head>
-	<body>
+	<body ng-controller="MainCtrl">
 		<header id="masthead-pro">
-			<div class="container">
+			<div class="container-fluid">
 				
 				<h1><a href="#"><img src="images/logo.png" alt="Logo"></a></h1>
 
 
 
+				<div class="top__bar">
+
+					<a class="call-link" href="tel://+77027082223">Служба поддержки: +7 777 000 00 00</a>
+					<a class="call-link" href="#">Версия для слабовидящих</a>
+					<a class="lang-link" href="#">Русский</a>
+					<a class="lang-link" href="#">English</a>
+					<a class="lang-link" href="#">Qazaq tili</a>
 
 
 
-				<nav id="site-navigation-pro" style="padding-top: 90px;">
+				</div>
+
+				<button class="btn btn-header-pro noselect" data-toggle="modal" data-target="#LoginModal" role="button" style="position: relative;
+    top: -5px;
+
+    right: 15px;">Войти / Регистрация</button>
+
+
+
+				<nav id="site-navigation-pro" style="padding-top: 90px; padding-left: 10px;">
 					<ul class="sf-menu">
 
 						<li class="normal-item-pro">
@@ -51,230 +69,66 @@
 
 
 						</li>
-
-
-						<li class="normal-item-pro">
-							<a href="#content-pro">Карта энергопотребления</a>
-
-
-
-						</li>
-
-
-
-						<li class="normal-item-pro">
-							<a href="signup-step1.html">Программы в сфере ЖКХ</a>
-
-
-							<ul class="sub-menu">
-								<li class="normal-item-pro">
-									<a href="#!">Реестр программ в сфере ЖКХ</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Реестр программ капитального ремонта</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Приоритетный проект <br> «Формирование комфортной городской среды»</a>
-								</li>
-							</ul>
-
-
-						</li>
-
-
-						<li class="normal-item-pro">
-							<a href="faqs.html">Аналитика и отчеты</a>
-							<ul class="sub-menu">
-								<li class="normal-item-pro">
-									<a href="#!">Оснащенность помещений <br> индивидуальными приборами учета</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Оснащенность многоквартирных <br> домов общедомовыми приборами учета</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Анализ технического состояния <br> многоквартирных домов</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Размещение информации о многоквартирных <br> домах в разрезе способов управления</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Работа с обращениями, поступившими <br> от граждан и организаций</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Информация о способе формирования <br> фонда капитального ремонта</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Карта внедрения ГИС ЖКХ</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Качество питьевой воды</a>
-								</li>
-
-							</ul>
-						</li>
-
-
-						<li class="normal-item-pro">
-							<a href="#!">Информация для граждан</a>
-							<ul class="sub-menu">
-								<li class="normal-item-pro">
-									<a href="#!">Встречи органов власти с гражданами</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Плата за жилое помещение и коммунальные услуги</a>
-									<ul class="sub-menu">
-										<li class="normal-item-pro">
-											<a href="#!">Тарифы на оплату коммунальных ресурсов</a>
-										</li>
-										<li class="normal-item-pro">
-											<a href="#!">Размер платы за содержание жилого помещения</a>
-										</li>
-										<li class="normal-item-pro">
-											<a href="#!">
-												Минимальный размер взноса на капитальный ремонт
-											</a>
-										</li>
-										<li class="normal-item-pro">
-											<a href="#!">
-												Социальная норма потребления электрической энергии (мощности)
-											</a>
-										</li>
-										<li class="normal-item-pro">
-											<a href="#!">
-												Размер платы за пользование жилым помещением
-											</a>
-										</li>
-										<li class="normal-item-pro">
-											<a href="#!">
-												Нормативные правовые акты в сфере регулирования тарифов
-											</a>
-										</li>
-										<li class="normal-item-pro">
-											<a href="#!">
-												Льготные тарифы на жилищно-коммунальные услуги
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">
-										Индексы изменения платы граждан за ЖКУ
-									</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">
-										Меры социальной поддержки
-									</a>
-									<ul class="sub-menu">
-										<li class="normal-item-pro">
-											<a href="#!">
-												Компенсации расходов отдельным категориям граждан
-											</a>
-										</li>
-										<li class="normal-item-pro">
-											<a href="#!">
-												Субсидии на оплату ЖКУ
-											</a>
-										</li>
-										<li class="normal-item-pro">
-											<a href="#!">
-												Нормативные правовые акты в сфере мер социальной поддержки
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">
-										Нормативы потребления коммунальных услуг
-									</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">
-										Информация о стандартах
-									</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">
-										Мероприятия общественного жилищного контроля
-									</a>
-								</li>
-							</ul>
-
-						</li>
-
-
-						<li class="normal-item-pro">
-							<a href="faqs.html">Реестры</a>
-							<ul class="sub-menu">
-								<li class="normal-item-pro">
-									<a href="#!">Реестр объектов жилищного фонда</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Реестры поставщиков информации</a>
-
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Реестр проверок</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Реестр информации о готовности к отопительному сезону (периоду)</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Реестры информации об обращении с твердыми коммунальными отходами</a>
-
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Реестр лицензий субъектов РК</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Сводный реестр лицензий</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Реестр дисквалифицированных лиц</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Реестр административных правонарушений</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Перечень органов власти</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!"> Реестр решений об изъятии земельных участков</a>
-								</li>
-								<li class="normal-item-pro">
-									<a href="#!">Перечень населенных пунктов без доступа к сети Интернет</a>
-								</li>
-							</ul>
-
-
-
-
-
-
-
-
-						<li class="normal-item-pro">
-							<a href="#content-pro">Открытые данные</a>
-
-
-
-						</li>
 					</ul>
+
+
+
+						<script type="text/ng-template" id="menuTreeMain">
+
+
+
+						<a ui-sref="dynamicpage({ id: menuItem.uniqKey, url: menuItem.url})" >{{menuItem.title}}
+						</a>
+
+
+
+
+
+						<ul ng-if="menuItem.childs.length !== 0" class="sub-menu">
+
+							<li class="normal-item-pro" ng-repeat="menuItem in menuItem.childs" ng-include="'menuTreeMain'">
+
+
+
+							</li>
+
+
+
+						</ul>
+
+
+
+
+
+
+
+					</script>
+
+					<ul class="sf-menu">
+
+
+
+
+						<li class="normal-item-pro" ng-repeat="menuItem in arrMenu" ng-include="'menuTreeMain'">
+
+
+						</li>
+
+
+
+
+
+
+					</ul>
+
+
+
 				</nav>
 
 
 
 
-				<button class="btn btn-header-pro noselect" data-toggle="modal" data-target="#LoginModal" role="button" style="top: -181px;
-    position: relative;">Войти</button>
 
-
-				<button class="btn btn-header-pro noselect" style="top: -181px;position: relative; margin-left: 20px; margin-right: 60px">KZ</button>
-				<button class="btn btn-header-pro noselect" style="top: -181px;position: relative;margin-left: 20px; margin-right: 10px">RU</button>
-				<button class="btn btn-header-pro noselect" style="top: -181px;position: relative;margin-left: 20px; margin-right: 10px">ENG</button>
-				<button class="btn btn-header-pro noselect" style="top: -246px;position: relative;left: -450px;">Для слабовидящих</button>
-				<a class="call-link" href="tel://+77027082223" style="position: relative;
-    left: 140px;">Служба поддержки: <br> +7 777 000 00 00</a>
 
 
 				<div id="mobile-bars-icon-pro" class="noselect"><i class="fas fa-bars"></i></div>
@@ -284,7 +138,7 @@
 			
 			<nav id="mobile-navigation-pro">
 
-				<ul id="mobile-menu-pro">
+				<ul class="mobile-menu-pro">
 
 					<li class="normal-item-pro">
 						<a href="#content-pro">О проекте</a>
@@ -292,215 +146,59 @@
 
 
 					</li>
-
-
-					<li class="normal-item-pro">
-						<a href="#content-pro">Карта энергопотребления</a>
-
-
-
-					</li>
-
-
-
-					<li class="normal-item-pro">
-						<a href="signup-step1.html">Программы в сфере ЖКХ</a>
-
-
-						<ul class="sub-menu">
-							<li class="normal-item-pro">
-								<a href="#!">Реестр программ в сфере ЖКХ</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Реестр программ капитального ремонта</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Приоритетный проект <br> «Формирование комфортной городской среды»</a>
-							</li>
-						</ul>
-
-
-					</li>
-
-
-					<li class="normal-item-pro">
-						<a href="faqs.html">Аналитика и отчеты</a>
-						<ul class="sub-menu">
-							<li class="normal-item-pro">
-								<a href="#!">Оснащенность помещений <br> индивидуальными приборами учета</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Оснащенность многоквартирных <br> домов общедомовыми приборами учета</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Анализ технического состояния <br> многоквартирных домов</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Размещение информации о многоквартирных <br> домах в разрезе способов управления</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Работа с обращениями, поступившими <br> от граждан и организаций</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Информация о способе формирования <br> фонда капитального ремонта</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Карта внедрения ГИС ЖКХ</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Качество питьевой воды</a>
-							</li>
-
-						</ul>
-					</li>
-
-
-					<li class="normal-item-pro">
-						<a href="#!">Информация для граждан</a>
-						<ul class="sub-menu">
-							<li class="normal-item-pro">
-								<a href="#!">Встречи органов власти с гражданами</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Плата за жилое помещение и коммунальные услуги</a>
-								<ul class="sub-menu">
-									<li class="normal-item-pro">
-										<a href="#!">Тарифы на оплату коммунальных ресурсов</a>
-									</li>
-									<li class="normal-item-pro">
-										<a href="#!">Размер платы за содержание жилого помещения</a>
-									</li>
-									<li class="normal-item-pro">
-										<a href="#!">
-											Минимальный размер взноса на капитальный ремонт
-										</a>
-									</li>
-									<li class="normal-item-pro">
-										<a href="#!">
-											Социальная норма потребления электрической энергии (мощности)
-										</a>
-									</li>
-									<li class="normal-item-pro">
-										<a href="#!">
-											Размер платы за пользование жилым помещением
-										</a>
-									</li>
-									<li class="normal-item-pro">
-										<a href="#!">
-											Нормативные правовые акты в сфере регулирования тарифов
-										</a>
-									</li>
-									<li class="normal-item-pro">
-										<a href="#!">
-											Льготные тарифы на жилищно-коммунальные услуги
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">
-									Индексы изменения платы граждан за ЖКУ
-								</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">
-									Меры социальной поддержки
-								</a>
-								<ul class="sub-menu">
-									<li class="normal-item-pro">
-										<a href="#!">
-											Компенсации расходов отдельным категориям граждан
-										</a>
-									</li>
-									<li class="normal-item-pro">
-										<a href="#!">
-											Субсидии на оплату ЖКУ
-										</a>
-									</li>
-									<li class="normal-item-pro">
-										<a href="#!">
-											Нормативные правовые акты в сфере мер социальной поддержки
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">
-									Нормативы потребления коммунальных услуг
-								</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">
-									Информация о стандартах
-								</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">
-									Мероприятия общественного жилищного контроля
-								</a>
-							</li>
-						</ul>
-
-					</li>
-
-
-					<li class="normal-item-pro">
-						<a href="faqs.html">Реестры</a>
-						<ul class="sub-menu">
-							<li class="normal-item-pro">
-								<a href="#!">Реестр объектов жилищного фонда</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Реестры поставщиков информации</a>
-
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Реестр проверок</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Реестр информации о готовности к отопительному сезону (периоду)</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Реестры информации об обращении с твердыми коммунальными отходами</a>
-
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Реестр лицензий субъектов РК</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Сводный реестр лицензий</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Реестр дисквалифицированных лиц</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Реестр административных правонарушений</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Перечень органов власти</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!"> Реестр решений об изъятии земельных участков</a>
-							</li>
-							<li class="normal-item-pro">
-								<a href="#!">Перечень населенных пунктов без доступа к сети Интернет</a>
-							</li>
-						</ul>
-
-
-
-
-
-
-
-
-					<li class="normal-item-pro">
-						<a href="#content-pro">Открытые данные</a>
-
-
-
-					</li>
 				</ul>
+
+
+
+				<script type="text/ng-template" id="menuTreeMainMobile">
+
+
+
+					<a ui-sref="dynamicpage({ id: menuItem.uniqKey, url: menuItem.url})" >{{menuItem.title}}
+					</a>
+
+
+
+
+
+					<ul ng-if="menuItem.childs.length !== 0" class="sub-menu">
+
+						<li class="normal-item-pro" ng-repeat="menuItem in menuItem.childs" ng-include="'menuTreeMainMobile'">
+
+
+
+						</li>
+
+
+
+					</ul>
+
+
+
+
+
+
+
+				</script>
+
+				<ul class="mobile-menu-pro">
+
+
+
+
+					<li class="normal-item-pro" ng-repeat="menuItem in arrMenu" ng-include="'menuTreeMainMobile'">
+
+
+					</li>
+
+
+
+
+
+
+				</ul>
+
+
 				<div class="clearfix"></div>
 			
 				<button class="btn btn-mobile-pro btn-green-pro noselect" data-toggle="modal" data-target="#LoginModal" role="button">Войти</button>
@@ -509,144 +207,13 @@
 		</header>
 		
 		
-		
-		
-		<div class="flexslider progression-studios-slider">
-	      <ul class="slides">
-				<li class="progression_studios_animate_in">
-					<div class="progression-studios-slider-image-background" style="background-image:url(images/demo/slide-1.jpg);">
-						<div class="progression-studios-slider-display-table">
-							<div class="progression-studios-slider-vertical-align">
-								
-								<div class="container">
-									
-									<div class="">
-										<div class="text-center">
-											<h2 style="color: white">Добро пожаловать в E-SHANYRAQ<span style="color:#3db13d;">.</span></h2>
-											<h4 style="color: white">Единая интеллектуальная информационная система инфраструктурно-жилищного комплекса E-SHANYRAQ  полностью работающая на блокчейне</h4>
-											<button class="btn btn-green-pro btn-shadow-pro" data-toggle="modal" data-target="#LoginModal" role="button" style="z-index: 5;
-    position: relative;">Начни заключать смарт - договора</button>
-										</div><!-- close .progression-studios-slider-caption-align -->
-									</div><!-- close .progression-studios-slider-caption-width -->
-									
-								</div><!-- close .container -->
-								
-							</div><!-- close .progression-studios-slider-vertical-align -->
-						</div><!-- close .progression-studios-slider-display-table -->
-						
-						<div class="progression-studios-slider-mobile-background-cover"></div>
-					</div><!-- close .progression-studios-slider-image-background -->
-				</li>
-
-			</ul>
-		</div><!-- close .progression-studios-slider - See /js/script.js file for options -->
-		
-		<div id="content-pro">
-			
-  	 		<div class="container">
-				
-
-				<div class="row">
-					<div class="col-md my-auto"><!-- .my-auto vertically centers contents -->
-						<img src="images/demo/home-1.jpg" class="img-fluid" alt="Watch in Any Devices">
-					</div>
-					<div class="col-md my-auto"><!-- .my-auto vertically centers contents -->
-	  					<h2 class="short-border-bottom">Портал E-SHANYRAQ</h2>
-						<p>E-SHANYRAQ - это портал по управлению своими расходами на ЖКХ, заключение смарт - контрактов с поставщиками услуг, теперь все Ваши расходы под контролем.</p>
-						<div style="height:15px;"></div>
-
-					</div>
-				</div><!-- close .row -->
-				
-				
-				<div class="row">
-					<div class="col-md my-auto"><!-- .my-auto vertically centers contents -->
-	  					<h2 class="short-border-bottom">Мы работаем на <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BB%D0%BE%D0%BA%D1%87%D0%B5%D0%B9%D0%BD" target="_blank">Блокчейн</a> технологии</h2>
-						<p>Мы первая компания в Казахстане, которая применила технологию блокчейн, для защиты Ваших контрактов и данных.</p>
-						<div style="height:15px;"></div>
-
-					</div>
-					<div class="col-md my-auto"><!-- .my-auto vertically centers contents -->
-						<img src="images/demo/home-2.jpg" class="img-fluid" alt="Make Your Own Playlist">
-					</div>
-				</div><!-- close .row -->
-				
-				
-				<div class="row">
-					<div class="col-md my-auto"><!-- .my-auto vertically centers contents -->
-						<img src="images/demo/home-3.jpg" class="img-fluid" alt="Watch in Ultra HD">
-					</div>
-					<div class="col-md my-auto"><!-- .my-auto vertically centers contents -->
-	  					<h2 class="short-border-bottom">Наш портал работает через <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BC%D0%B0%D1%80%D1%82-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82" target="_blank">смарт - контракты</a></h2>
-						<p>Наш портал позволяет заключать Вам смарт - контракты, с постащиками услуг, что гарантирует 100% гарантию исполнения своих обязательст и сохранность Ваших денег.</p>
-						<div style="height:15px;"></div>
-
-					</div>
-				</div><!-- close .row -->
-				
-				<div style="height:35px;"></div>
-				
-				<div class="clearfix"></div>
-			</div><!-- close .container -->
-
-
-
-		</div>
-
-
-
-		<hr>
-
-        <div>
-        <div class="container">
-
-            <div class="row">
-                <div class="mx-auto">
-                    <div style="height:70px;"></div>
-                    <h2 class="short-border-bottom">КСК в цифрах</h2>
-                </div>
-            </div><!-- close .row -->
-
-            <div style="height:25px;"></div>
-
-            <div class="row">
-                <div class="col-md">
-                    <ul class="checkmark-list-pro">
-                        <li>200 Кол-во введенных домов в РК 2018</li>
-                        <li>6 934 093 Зарегистрированных пользователей</li>
-                    </ul>
-                </div>
-                <div class="col-md">
-                    <ul class="checkmark-list-pro">
-                        <li>105 Зарегистрированных СЕМ</li>
-                        <li>943 731 738 Задолжность перед СЕМами</li>
-                    </ul>
-                </div>
-                <div class="col-md">
-                    <ul class="checkmark-list-pro">
-                        <li>500 Кол-во строищихся объектов РК 2018</li>
-                        <li>3 743 Зарегистрированных управляющих компаний</li>
-                    </ul>
-                </div>
-
-				<div class="col-md">
-					<ul class="checkmark-list-pro">
-						<li>321 394 323 349 Общий фонд жилищних
-							накоплений</li>
-						<li>743 847 372 Потребление энергоресурса</li>
-					</ul>
-				</div>
-            </div><!-- close .row -->
 
 
 
 
-            <div class="clearfix"></div>
-        </div><!-- close .container -->
-			
-			</div><!-- close .progression-pricing-section-background -->
-			
-		</div><!-- close #content-pro -->
+			<div class="container-fluid" ui-view></div>
+
+
 		
 		<footer id="footer-pro">
 			<div class="container">
@@ -786,8 +353,32 @@
 		<script src="js/libs/web3.min.js"></script><!-- WEB3 Блокчейн библа -->
 
 
-		<!-- All JavaScript in Footer -->
-		
+
+
+
+		<!--Angular Scripts-->
+		<script src="portal/assets/js/angular.min.js"></script>
+		<script src="portal/assets/js/angular-ui-router.min.js"></script>
+		<script src="portal/assets/js/angular-resource.min.js"></script>
+		<script src="portal/assets/js/angular-sanitize.min.js"></script>
+		<script src="portal/assets/js/angular-translate.min.js"></script>
+		<script src="portal/assets/js/angular-translate-loader-static-files.min.js"></script>
+		<script src="portal/assets/js/angular-animate.min.js"></script>
+		<script src="portal/assets/js/angular-aria.min.js"></script>
+		<script src="portal/assets/js/angular-messages.min.js"></script>
+		<script src="portal/assets/js/angular-material.min.js"></script>
+
+		<script src="app.module.js"></script>
+		<script src="app.routes.js"></script>
+
+
+
+		<script src="dynamicpage/dynamicController.js"></script>
+		<script src="main/mainController.js"></script>
+
+
+
+
 		<!-- Additional Plugins and JavaScript -->
 		<script src="js/navigation.js" defer></script><!-- Header Navigation JS Plugin -->
 		<script src="js/jquery.flexslider-min.js" defer></script><!-- FlexSlider JS Plugin -->		

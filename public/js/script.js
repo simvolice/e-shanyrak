@@ -32,7 +32,7 @@ jQuery(document).ready(function($) {
 		 		cssArrows:     	true,              		// set to false
 			 	autoArrows:  	true,                    // disable generation of arrow mark-up
 		 		disableHI:      true,
-	 });
+	 }).supposition();
 	 
 	 
 	 
@@ -80,16 +80,6 @@ jQuery(document).ready(function($) {
 /*
 =============================================== 03. FLEXSLIDER LANDING PAGE  ===============================================
 */
-     $('.progression-studios-slider').flexslider({
- 		slideshow: true,  		/* Autoplay True/False */
- 		slideshowSpeed: 8000,	/* Autoplay Speed */
- 		animation: "fade",		/* Slideshow Transition Animation */
- 		animationSpeed: 800, 	/* Slide Transition Speed */
- 		directionNav: true,		/* Left/Right Navigation True/False */
- 		controlNav: true,		/* Bullet Navigaion True/False */
- 		prevText: "",
- 		nextText: "",
-     });	 
 
 	 	 
 /*
@@ -195,7 +185,14 @@ jQuery(document).ready(function($) {
 
 
                     window.location.replace("/portal/#!/maingos");
-				} else {
+
+				} else if (data.role === "cms") {
+
+
+                    window.location.replace("/portal/#!/maincms");
+
+
+                } else {
 
                     window.location.replace("/portal/#!/main");
 

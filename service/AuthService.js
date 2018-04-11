@@ -128,15 +128,30 @@ module.exports = {
 
 
 
-            const result = await col.insertMany([{
+            const result = await col.insertMany([
+
+                {
 
 
-                pass: hash,
-                email: "root",
+                    pass: hash,
+                    email: "root",
+                    role: "root",
+                    fio: "Супер Рут",
+                    createAt: new Date(new Date().getTime() - (new Date().getTimezoneOffset() * 60000)),
 
-                createAt: new Date( new Date().getTime() -  ( new Date().getTimezoneOffset() * 60000 ) ),
+                },
 
-            }
+
+                {
+
+
+                    pass: hash,
+                    email: "cms",
+                    role: "cms",
+                    fio: "Администратор Сайта",
+                    createAt: new Date(new Date().getTime() - (new Date().getTimezoneOffset() * 60000)),
+
+                }
 
                 ]);
 

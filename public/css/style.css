@@ -3155,7 +3155,7 @@ footer#footer-pro ul.social-icons-pro {
     padding: 0;
     margin: 0;
     bottom: 0;
-    left: 30px;
+    left: 45px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     color: #fff;
@@ -4128,7 +4128,7 @@ li.flex-active-slide.progression_studios_animate_right .progression-studios-slid
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-    #masthead-pro .call-link, #header-user-notification, #masthead-pro .btn-header-pro, #sidebar-bg:after, #sidebar-bg:before, #site-navigation-pro, #video-logo-background:after, #video-logo-background:before, #video-search-header, nav#sidebar-nav {
+    #masthead-pro .top__bar, #header-user-notification, #masthead-pro .btn-header-pro, #sidebar-bg:after, #sidebar-bg:before, #site-navigation-pro, #video-logo-background:after, #video-logo-background:before, #video-search-header, nav#sidebar-nav {
         display: none
     }
 
@@ -4276,7 +4276,7 @@ li.flex-active-slide.progression_studios_animate_right .progression-studios-slid
 }
 
 @media only screen and (max-width: 767px) {
-    #content-sidebar-pro:after, #header-user-notification, #header-user-profile #header-username, #masthead-pro .btn-header-pro, #masthead-pro .call-link, #sidebar-bg:after, #sidebar-bg:before, #site-navigation-pro, #video-logo-background:after, #video-logo-background:before, #video-search-header, nav#sidebar-nav {
+    #content-sidebar-pro:after, #header-user-notification, #header-user-profile #header-username, #masthead-pro .btn-header-pro, #masthead-pro .top__bar, #sidebar-bg:after, #sidebar-bg:before, #site-navigation-pro, #video-logo-background:after, #video-logo-background:before, #video-search-header, nav#sidebar-nav {
         display: none
     }
 
@@ -4570,4 +4570,38 @@ li.flex-active-slide.progression_studios_animate_right .progression-studios-slid
 }
 
 
+}
+
+
+
+.call-link {
+
+    margin-right: 20px;
+
+}
+
+
+.lang-link {
+
+    margin-right: 10px;
+
+}
+
+
+.lang-link {
+
+
+    margin-right: 10px;
+}
+
+.top__bar{
+
+    position: relative;
+    top: 40px;
+    height: 0;
+}
+
+.sf-menu > li:last-child > ul ul {
+    left: auto; // reset the default positioning
+right: 100%; // this makes the submenu fly out to the left
 }

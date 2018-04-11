@@ -1,0 +1,322 @@
+<div class="row" ng-controller="maincmsCtrl">
+
+
+
+    <div class="col-md-12">
+
+        <md-card>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="title text-center" style="text-transform: uppercase; margin-top: 10px">Работа над сайтом</h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <md-tabs md-dynamic-height md-border-bottom>
+                        <md-tab label="Работа с разделами меню">
+                            <md-content class="md-padding">
+
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <md-button class="md-raised md-primary" ng-click="addNewMenu()">Создать новый пункт меню
+                                        </md-button>
+
+
+                                        <md-button class="md-raised md-primary" ng-click="saveMenu()">Сохранить все изменения
+                                        </md-button>
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-12">
+
+
+
+                                        <script type="text/ng-template" id="menuTree">
+
+
+
+                                            <i class="material-icons" ng-hide="menuItem.id">subdirectory_arrow_right</i>
+
+
+                                            <input type="text" value="{{menuItem.title}}" ng-model="menuItem.title"
+                                                   style="width: 500px;">
+
+
+                                            <md-button class="md-secondary"
+                                                       ng-click="addSecondItemMenu(menuItem.childs)">Добавить
+                                                подраздел
+                                            </md-button>
+
+                                            <md-button class="md-secondary md-fab md-primary md-mini"
+                                                       aria-label="Profile" ng-click="deleteItemMenu(menuItem.uniqKey, menuItem.id)">
+                                                <md-icon class="material-icons">delete_forever</md-icon>
+                                            </md-button>
+
+
+                                            <ol ng-if="menuItem.childs" class="custom__ol__style">
+
+                                                <li class="secondary-button-padding" ng-repeat="menuItem in menuItem.childs" ng-include="'menuTree'">
+
+
+
+                                                </li>
+
+
+
+                                            </ol>
+
+
+
+
+
+
+
+                                        </script>
+
+                                        <ol class="custom__ol__style">
+
+
+
+
+                                            <li class="secondary-button-padding" ng-repeat="menuItem in menus" ng-include="'menuTree'">
+
+
+                                            </li>
+
+
+
+
+
+
+                                        </ol>
+
+                                    </div>
+
+                                </div>
+
+
+
+
+
+                            </md-content>
+                        </md-tab>
+                        <md-tab label="Создать пост">
+                            <md-content class="md-padding">
+
+
+                                <div class="row">
+                                    <div class="col-md-12">
+
+
+                                        <md-input-container class="md-block" flex-gt-sm>
+                                            <label>Заголовок статьи</label>
+                                            <input ng-model="title">
+                                        </md-input-container>
+
+
+                                        <md-input-container>
+                                            <label>Выбрать раздел меню</label>
+                                            <md-select ng-model="selectedItem">
+
+
+                                                    <md-option ng-value="itemMenu.uniqKey" ng-repeat="itemMenu in menusFlat |
+              filter:searchTerm">{{itemMenu.title}}</md-option>
+
+                                            </md-select>
+                                        </md-input-container>
+
+
+
+
+                                        <input ng-files="getTheFiles($files)" id="file" type="file" class="form-control"
+                                               accept="*/*" multiple/>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-12">
+
+
+                                        <div id="standalone-container" style="height: 500px;">
+                                            <div id="toolbar-container">
+
+                                <span class="ql-formats">
+      <button class="ql-bold"></button>
+      <button class="ql-italic"></button>
+      <button class="ql-underline"></button>
+
+    </span>
+
+
+                                                <span class="ql-formats">
+      <button class="ql-header" value="1"></button>
+      <button class="ql-header" value="2"></button>
+
+
+    </span>
+                                                <span class="ql-formats">
+      <button class="ql-list" value="ordered"></button>
+      <button class="ql-list" value="bullet"></button>
+
+    </span>
+                                                <span class="ql-formats">
+
+      <select class="ql-align"></select>
+    </span>
+                                                <span class="ql-formats">
+      <button class="ql-link"></button>
+      <button class="ql-image"></button>
+      <button class="ql-video"></button>
+
+    </span>
+                                                <span class="ql-formats">
+      <button class="ql-clean"></button>
+    </span>
+                                            </div>
+                                            <div id="editor-container"></div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-12">
+
+
+                                        <md-button class="md-raised md-primary" ng-click="savePost()">Сохранить</md-button>
+
+
+
+
+                                    </div>
+                                </div>
+
+
+                            </md-content>
+                        </md-tab>
+
+
+                        <md-tab label="Удалить пост" ng-click="clkTab()">
+                            <md-content class="md-padding">
+
+
+                                <div class="row">
+                                    <div class="col-md-12 table-responsive">
+
+
+
+
+                                        <style type="text/css">
+                                            .tg  {border-collapse:collapse;border-spacing:0; width: 98.7%; margin-left: 8px;}
+                                            .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+                                            .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+                                            .tg .tg-hgcj{font-weight:bold;text-align:center; vertical-align:middle}
+                                            .tg .tg-baqh{text-align:center;vertical-align:middle}
+                                            .tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:middle}
+
+
+                                        </style>
+                                        <table class="tg table-striped">
+                                            <tr>
+                                                <th class="tg-hgcj">Заголовок статьи</th>
+                                                <th class="tg-hgcj">Дата создания</th>
+
+                                                <th class="tg-hgcj">Удалить статью</th>
+                                            </tr>
+
+
+                                            <tbody>
+
+
+                                            <tr ng-repeat="data in allpost | filter:search">
+
+
+
+
+
+                                                <td class="tg-baqh">{{data.title}}</td>
+
+
+
+                                                <td class="tg-baqh">{{data.createAt | date : "dd.MM.y"}}</td>
+
+
+
+
+
+
+
+                                                <td class="tg-baqh"><i class="fa fa-trash" ng-click="deletePost(data._id)" style="cursor: pointer"></i></td>
+
+
+                                            </tr>
+
+
+
+                                            </tbody>
+
+
+                                        </table>
+
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </md-content>
+                        </md-tab>
+
+
+                    </md-tabs>
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </md-card>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
