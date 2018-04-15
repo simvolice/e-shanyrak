@@ -21,58 +21,11 @@
 
 
                     <md-tabs md-dynamic-height md-border-bottom>
-                        <md-tab label="Мои лимиты">
+                        <md-tab label="Заключить зеленый контракт">
                             <md-content class="md-padding">
 
 
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <md-card>
-                                            <md-card-title>
-                                                <md-card-title-text>
-                                                    <span class="md-headline">Создать новый лимит</span>
-
-                                                </md-card-title-text>
-
-
-
-
-                                            </md-card-title>
-
-
-
-                                            <div class="row" style="margin-left: 20px">
-
-                                                <div class="col-md-6">
-                                                    <md-input-container class="md-block" flex-gt-sm>
-                                                        <label>Лимит на электроэнергию</label>
-                                                        <input ng-model="data.electro">
-                                                    </md-input-container>
-
-                                                    <md-input-container class="md-block" flex-gt-sm>
-                                                        <label>Лимит на холодную воду</label>
-                                                        <input ng-model="data.watercold">
-                                                    </md-input-container>
-
-
-                                                    <md-input-container class="md-block" flex-gt-sm>
-                                                        <label>Лимит на горячую воду</label>
-                                                        <input ng-model="data.waterhot">
-                                                    </md-input-container>
-
-
-                                                </div>
-
-                                            </div>
-
-                                            <md-card-actions layout="row">
-                                                <md-button class="md-raised md-primary">Сохранить</md-button>
-
-                                            </md-card-actions>
-
-                                        </md-card>
-                                    </div>
-
 
 
                                     <div class="col-md-6">
@@ -92,9 +45,10 @@
                                             <div style="margin-left: 20px">
 
 
-                                                <h6 class="title">Электроэнергия: 500 квт/ч</h6>
-                                                <h6 class="title">Холодная вода: 500 м3</h6>
-                                                <h6 class="title">Горячая вода: 500 м3</h6>
+                                                <h6 class="title">На электроэнергию – 2000 тенге – (автоматический пересчет на единицу ресурсов) 400 кВт</h6>
+                                                <h6 class="title">На холодную воду – 2000 тенге – (автоматический пересчет на единицу ресурсов) 4 м3</h6>
+                                                <h6 class="title">На горячую воду – 2000 тенге – (автоматический пересчет на единицу ресурсов) 4 м3</h6>
+                                                <h6 class="title">На газ – 2000 тенге – (автоматический пересчет на единицу ресурсов) 4 м3</h6>
 
 
 
@@ -104,10 +58,119 @@
 
                                         </md-card>
                                     </div>
+                                    <div class="col-md-6">
+                                        <md-card>
+
+
+
+                                            <style type="text/css">
+                                                .tg  {border-collapse:collapse;border-spacing:0; width: 100%;}
+                                                .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+                                                .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+                                                .tg .tg-hgcj{font-weight:bold;text-align:center; vertical-align:middle}
+                                                .tg .tg-baqh{text-align:center;vertical-align:middle}
+                                                .tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:middle}
+
+
+                                            </style>
+                                            <table class="tg table-striped">
+                                                <tr>
+
+                                                    <th class="tg-hgcj">Наименование услуги</th>
+                                                    <th class="tg-hgcj">В финансах</th>
+                                                    <th class="tg-hgcj">В количестве потребленных ресурсов</th>
+
+
+                                                </tr>
+
+
+                                                <tbody>
+
+
+                                                <tr>
+
+
+
+
+
+                                                    <td class="tg-baqh">Электричество</td>
+                                                    <td class="tg-baqh">200</td>
+                                                    <td class="tg-baqh">3 кВт</td>
+
+
+
+
+                                                </tr>
+
+
+                                                <tr>
+
+                                                    <td class="tg-baqh">Холодная вода</td>
+                                                    <td class="tg-baqh">3000</td>
+                                                    <td class="tg-baqh">5 m3</td>
+
+
+                                                </tr>
+
+
+                                                <tr>
+
+
+                                                    <td class="tg-baqh">Горячая вода</td>
+                                                    <td class="tg-baqh">3000</td>
+                                                    <td class="tg-baqh">4 m3</td>
+
+
+                                                </tr>
+
+
+                                                <tr>
+
+                                                    <td class="tg-baqh">Газ</td>
+                                                    <td class="tg-baqh">3000</td>
+                                                    <td class="tg-baqh"> m3</td>
+
+
+
+
+                                                </tr>
+
+
+
+                                                </tbody>
+
+
+                                            </table>
+
+
+                                        </md-card>
+                                    </div>
 
 
                                 </div>
 
+
+
+
+
+                            </md-content>
+                        </md-tab>
+
+
+
+                        <md-tab label="Архив зеленых контрактов">
+                            <md-content class="md-padding">
+
+
+
+
+                            </md-content>
+                        </md-tab>
+
+
+
+                        <md-tab label="Аналитика – размер рекомендуемого лимита">
+                            <md-content class="md-padding">
 
 
 

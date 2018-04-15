@@ -244,8 +244,8 @@ angular.module('app').controller('HomePageCtrl', function ($scope, $mdDialog, $m
                 name_org : $scope.data.selectOrg,
                 address_org: "Республика Казахстан, 010000 г. Астана, ул. Мира, 55",
                 bin_ispolnitel: "161040023528",
-                bank_name_org: "ДБ АО Тестовый Банк",
-                iik_ispolnitel: "KZ44914012203KZ003U6"
+                bank_name_org: "АО Казкоммерцбанк",
+                iik_ispolnitel: "KZ779261802104233017"
 
 
             };

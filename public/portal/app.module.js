@@ -61,16 +61,28 @@ app.filter('ruFormat', function() {
 
 app.controller('MainCtrl', function ($scope, $state, $timeout, $translate, $rootScope, $window) {
 
+
+
+
+
+
+
+
     $rootScope.fio = localStorage.getItem("fio");
 
     $scope.arrRole = [];
 
     let arrMenuForRolesUser = [
 
-
-        {state: "main", title: "Мои смарт контракты", icon: "fa-file-alt"},
         {state: "myhouse", title: "Мой дом", icon: "fa-home"},
+
         {state: "myflat", title: "Моя квартира", icon: "fa-tv"},
+
+        {state: "housemanage", title: "Управление домом", icon: "fa-tv"},
+
+        {state: "main", title: "Смарт контракты", icon: "fa-file-alt"},
+
+
         {state: "greencontract", title: "Зеленый контракт", icon: "fa-leaf"},
 
 
@@ -82,8 +94,11 @@ app.controller('MainCtrl', function ($scope, $state, $timeout, $translate, $root
     let arrMenuForRolesKSK = [
 
 
-        {state: "main", title: "Мои смарт контракты", icon: "fa-file-alt"},
-        {state: "controlksk", title: "Контроль и мониторинг", icon: "fa-database"}
+        {state: "mainksk", title: "Информация о кск", icon: "fa-file-alt"},
+        {state: "budgetksk", title: "Бюджет", icon: "fa-database"},
+        {state: "planksk", title: "План работ", icon: "fa-database"},
+        {state: "messageksk", title: "Сообщения", icon: "fa-database"},
+        {state: "serviceksk", title: "Услуги", icon: "fa-database"}
 
 
 
@@ -93,9 +108,11 @@ app.controller('MainCtrl', function ($scope, $state, $timeout, $translate, $root
     let arrMenuForRolesSem = [
 
 
-        {state: "main", title: "Мои смарт контракты", icon: "fa-file-alt"},
-        {state: "controlsem", title: "Расход ресурсов", icon: "fa-money-bill-alt"},
-        {state: "analyticssem", title: "Анализ данных", icon: "fa-database"},
+        {state: "mainsem", title: "Текущая информация", icon: "fa-file-alt"},
+        {state: "financesem", title: "Финансовые показатели", icon: "fa-money-bill-alt"},
+        {state: "powersem", title: "Производственные показатели", icon: "fa-database"},
+        {state: "datasem", title: "Данные", icon: "fa-database"},
+        {state: "notifsem", title: "Оповещения потребителей и КСК", icon: "fa-database"},
 
 
 

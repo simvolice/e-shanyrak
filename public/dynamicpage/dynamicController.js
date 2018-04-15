@@ -8,6 +8,8 @@ angular.module('land').controller('dynamicPageCtrl', function ($sce, $scope, $st
 
 
 
+    $scope.readonly = true;
+    $scope.removable = false;
 
 
 

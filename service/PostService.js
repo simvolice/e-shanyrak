@@ -169,8 +169,98 @@ module.exports = {
         }
 
 
-    }
+    },
 
+
+
+    getOnePostById: async (id) => {
+
+        try {
+
+
+
+            const col = dbConnect.getConnect().collection('posts');
+
+
+
+
+            const result = await col.findOne({_id: ObjectId(id)});
+
+
+
+
+            return result;
+
+
+        }catch(err) {
+
+
+
+            return err;
+
+
+        }
+
+
+    },
+
+
+    updPost: async (objParams) => {
+
+        try {
+
+
+
+            const col = dbConnect.getConnect().collection('posts');
+
+
+
+
+
+
+            const result = await col.updateOne({_id: ObjectId(objParams.id)},
+
+
+                {
+                    $currentDate: {
+                        lastModified: true
+                    },
+                    $set: {
+
+
+
+                        title: objParams.title,
+                        postHTML: objParams.postHTML,
+                        menuUniqueKey: Int32(objParams.menuUniqueKey),
+                        urlImg: objParams.urlImg,
+
+
+
+
+                    }
+
+                }
+            );
+
+
+
+
+            return result;
+
+
+        }catch(err) {
+
+
+
+
+
+            return err;
+
+
+        }
+
+
+    },
 
 
 

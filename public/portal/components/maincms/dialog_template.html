@@ -1,0 +1,161 @@
+<md-dialog class="fullscreen-dialog" aria-label="Редактировать статью">
+
+
+
+
+
+
+
+        <md-toolbar class="md-toolbar-tools">
+
+                <h2 style="color: white">Редактировать статью</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="closeDialog()" aria-label="Отмена">
+                    <i class="fa fa-window-close"></i>
+                </md-button>
+
+        </md-toolbar>
+
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+
+
+                <div class="row">
+                    <div class="col-md-12">
+
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Заголовок статьи</label>
+                            <input ng-model="data.title">
+                        </md-input-container>
+
+
+                        <md-input-container>
+                            <label>Выбрать раздел меню</label>
+                            <md-select ng-model="data.selectedItem">
+
+
+                                <md-option ng-value="itemMenu.uniqKey" ng-repeat="itemMenu in data.menusFlat |
+              filter:searchTerm">{{itemMenu.title}}</md-option>
+
+                            </md-select>
+                        </md-input-container>
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+
+
+                        <div id="standalone-container" style="height: 500px;">
+                            <div id="toolbar-container-upd">
+
+                                <span class="ql-formats">
+      <button class="ql-bold"></button>
+      <button class="ql-italic"></button>
+      <button class="ql-underline"></button>
+
+    </span>
+
+
+                                <span class="ql-formats">
+      <button class="ql-header" value="1"></button>
+      <button class="ql-header" value="2"></button>
+
+
+    </span>
+                                <span class="ql-formats">
+      <button class="ql-list" value="ordered"></button>
+      <button class="ql-list" value="bullet"></button>
+
+    </span>
+                                <span class="ql-formats">
+
+      <select class="ql-align"></select>
+    </span>
+                                <span class="ql-formats">
+      <button class="ql-link"></button>
+      <button class="ql-image"></button>
+      <button class="ql-video"></button>
+
+    </span>
+                                <span class="ql-formats">
+      <button class="ql-clean"></button>
+    </span>
+                            </div>
+                            <div id="editor-container-upd"></div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+                <div class="row" style="margin-top: 50px">
+                    <div class="col-md-12">
+
+
+                        <h6 style="margin-left: 10px">Прикрепленные файлы:
+
+
+
+                            <md-chips class="custom-chips" ng-model="data.urlImg" readonly="data.readonly"
+                                       md-removable="data.removable">
+                                <md-chip-template>
+        <span>
+          <a href="../{{$chip.url}}" target="_blank">{{$chip.fileName}}</a>
+        </span>
+                                </md-chip-template>
+
+                            </md-chips>
+
+
+
+                        </h6>
+
+
+
+                        <input ng-files="getTheFilesUpd($files)" id="file" type="file" class="form-control"
+                               accept="*/*" multiple/>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+        </md-dialog-content>
+
+
+
+
+    <md-dialog-actions layout="row">
+
+
+        <md-button class="md-raised md-primary" ng-click="updPost()">
+            Сохранить
+        </md-button>
+
+        <md-button class="md-raised md-primary" ng-click="closeDialog()" aria-label="Отмена">
+            Отмена
+        </md-button>
+        <span flex></span>
+    </md-dialog-actions>
+
+
+
+</md-dialog>

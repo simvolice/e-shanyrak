@@ -21,7 +21,7 @@
 
 
                     <md-tabs md-dynamic-height md-border-bottom>
-                        <md-tab label="Информация о моем доме">
+                        <md-tab label="Цифровой паспорт дома">
                             <md-content class="md-padding">
 
 
@@ -30,8 +30,8 @@
                                         <md-card>
                                             <md-card-title>
                                                 <md-card-title-text>
-                                                    <h6 class="title">Наименование жилого комплекса: "Тестовый дом"</h6>
-                                                    <h6 class="title">Адрес дома: ул. Тестовая, 55</h6>
+                                                    <h6 class="title">Наименование жилого комплекса: "Тестовый ЖК"</h6>
+                                                    <h6 class="title">Адрес дома: ул Ч. Айтматова 31</h6>
                                                     <h6 class="title">Количество квартир: 150</h6>
                                                     <h6 class="title">Год постройки: 2015 г.</h6>
                                                     <h6 class="title">Этажность: 14</h6>
@@ -56,7 +56,7 @@
                                             </md-card-title>
 
                                             <md-card-actions layout="row">
-                                                <md-button class="md-raised md-primary">Скачать паспорт дома</md-button>
+                                                <a class="md-button md-raised md-primary" href="assets/doc/Электронный паспорт Айтматова 31.xlsx">Скачать паспорт дома</a>
 
                                             </md-card-actions>
 
@@ -73,22 +73,42 @@
                         <md-tab label="Общедомовые счетчики">
                             <md-content class="md-padding">
 
+
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <md-card>
                                             <md-card-title>
                                                 <md-card-title-text>
-                                                    <span class="md-headline">500 Гкал</span>
-                                                    <span class="md-subhead">Показания тепла</span>
+                                                    <span class="md-headline">{{data.q}} Гкал</span>
+                                                    <span class="md-subhead">Показания теплопотребления</span>
                                                 </md-card-title-text>
 
                                                 <md-card-title-media>
 
 
-                                                        <i class="flaticon-radiator"></i>
+                                                    <i class="flaticon-radiator"></i>
 
 
                                                 </md-card-title-media>
+
+                                            </md-card-title>
+
+                                        </md-card>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <md-card>
+                                            <md-card-title>
+                                                <md-card-title-text>
+                                                    <span class="md-headline">{{data.m1}}</span>
+                                                    <span class="md-subhead">Массовый расход на подаче тонн</span>
+                                                </md-card-title-text>
+
+
 
                                             </md-card-title>
 
@@ -100,17 +120,12 @@
                                         <md-card>
                                             <md-card-title>
                                                 <md-card-title-text>
-                                                    <span class="md-headline">500 кВт/ч</span>
-                                                    <span class="md-subhead">Показания энергии</span>
+                                                    <span class="md-headline">{{data.m2}}</span>
+                                                    <span class="md-subhead">Массовый расход на обратке тонн</span>
                                                 </md-card-title-text>
 
-                                                <md-card-title-media>
 
 
-                                                    <i class="flaticon-light-bulb"></i>
-
-
-                                                </md-card-title-media>
 
                                             </md-card-title>
 
@@ -124,18 +139,11 @@
                                         <md-card>
                                             <md-card-title>
                                                 <md-card-title-text>
-                                                    <span class="md-headline">500 м3</span>
-                                                    <span class="md-subhead">Показания холодной воды</span>
+                                                    <span class="md-headline">{{data.t1}}</span>
+                                                    <span class="md-subhead">Температура на подаче С</span>
                                                 </md-card-title-text>
 
 
-                                                <md-card-title-media>
-
-
-                                                    <i class="flaticon-tap"></i>
-
-
-                                                </md-card-title-media>
 
                                             </md-card-title>
 
@@ -147,17 +155,11 @@
                                         <md-card>
                                             <md-card-title>
                                                 <md-card-title-text>
-                                                    <span class="md-headline">500 м3</span>
-                                                    <span class="md-subhead">Показания горячей воды</span>
+                                                    <span class="md-headline">{{data.t2}}</span>
+                                                    <span class="md-subhead">Температура на обратке С</span>
                                                 </md-card-title-text>
 
-                                                <md-card-title-media>
 
-
-                                                    <i class="flaticon-tap-1"></i>
-
-
-                                                </md-card-title-media>
 
                                             </md-card-title>
 
@@ -166,149 +168,80 @@
 
                                 </div>
 
-                            </md-content>
-                        </md-tab>
-                        <md-tab label="Мое КСК">
-                            <md-content class="md-padding">
-                                <h6 class="title">Объявления</h6>
+
 
                                 <div class="row">
-
                                     <div class="col-md-6">
-
-
                                         <md-card>
-                                            <i class="flaticon-megaphone"></i>
                                             <md-card-title>
                                                 <md-card-title-text>
-                                                    <span class="md-headline">Собрание по ремонту лифта и проводки: 1 марта в 19:30, 5 подъезд</span>
+                                                    <span class="md-headline">{{data.p1}}</span>
+                                                    <span class="md-subhead">Давление на подаче Ат</span>
                                                 </md-card-title-text>
+
+
+
                                             </md-card-title>
-                                            <md-card-content>
-                                                <p>
-                                                    С 1 апреля в нашем доме начнется обязательный капитальный ремонт по государственной программе.
-                                                </p>
-                                                <p>
-                                                    Сейчас в проект не включен ремонт лифта и проводки — якобы потому, что они еще в нормальном состоянии. Совет жильцов хочет включить ремонт лифта и проводки, чтобы жильцам было удобно ездить, а мощности хватало на всех.
-                                                </p>
-                                                <p>
-                                                    Чтобы лифт и электрику включили в проект, мы должны провести собрание. На собрании должно быть не менее 2/3 жильцов дома. Приходите на собрание и поставьте подпись за ремонт лифта и проводки. На это уйдет пять минут.
 
-                                                    Приходите на собрание в среду, 1 марта, в 19:30,
-                                                    напротив пятого подъезда.
-
-                                                </p>
-                                            </md-card-content>
-                                            <md-card-actions layout="row" layout-align="end center">
-                                                <md-button>Я пойду</md-button>
-                                                <md-button>Я не пойду</md-button>
-                                            </md-card-actions>
                                         </md-card>
-
                                     </div>
 
+
                                     <div class="col-md-6">
                                         <md-card>
-                                            <i class="flaticon-megaphone"></i>
                                             <md-card-title>
                                                 <md-card-title-text>
-                                                    <span class="md-headline">Нужен ли вам консьерж
-в пятом подъезде?
-</span>
+                                                    <span class="md-headline">{{data.p2}}</span>
+                                                    <span class="md-subhead">Давление на обратке Ат</span>
                                                 </md-card-title-text>
+
+
+
                                             </md-card-title>
-                                            <md-card-content>
-                                                <p>
-                                                    Управляющая компания может организовать работу консьержа в нашем подъезде. Консьерж будет следить за порядком в подъезде, не пустит хулиганов и расклейщиков объявлений и будет заниматься благоустройством клумбы у подъезда.
-                                                </p>
-                                                <p>
-                                                    Для вас услуги консьержа будут стоить 20 рублей в месяц.
 
-                                                    Чтобы организовать пост консьержа, нужно согласие 70% жильцов. Приходите на собрание, чтобы проголосовать:
-
-                                                </p>
-                                                <p>
-                                                    29 апреля, в субботу,
-                                                    в 11:00, возле нашего подъезда.
-                                                    На голосование уйдет пять минут.
-                                                    С собой ничего брать не нужно.
-
-                                                </p>
-                                            </md-card-content>
-                                            <md-card-actions layout="row" layout-align="end center">
-                                                <md-button>Я пойду</md-button>
-                                                <md-button>Я не пойду</md-button>
-                                            </md-card-actions>
                                         </md-card>
-
                                     </div>
 
                                 </div>
 
+
                                 <div class="row">
-
                                     <div class="col-md-6">
-
-
                                         <md-card>
-                                            <i class="flaticon-megaphone"></i>
                                             <md-card-title>
                                                 <md-card-title-text>
-                                                    <span class="md-headline">Горячей воды не будет
-с 1 по 15 мая
-</span>
+                                                    <span class="md-headline">{{data.v1}}</span>
+                                                    <span class="md-subhead">Объёмный расход на подаче м3</span>
                                                 </md-card-title-text>
+
+
+
                                             </md-card-title>
-                                            <md-card-content>
-                                                <p>
-                                                    За это время «Мостепло» заменит часть труб в нашем районе и отремонтирует оборудование на теплоузле. Отключат только горячую воду, холодная будет всё время.
-
-                                                    Воду перекроют		01 мая с 10:00 до 11:00,
-                                                    включат 			15 мая с 12:00 до 15:00.
-
-                                                </p>
-                                                <p>
-                                                    Чтобы на время профилактики в квартире была горячая вода, используйте бытовые водонагреватели. При установке нагревателя обращайтесь только к квалифицированным сантехникам, не устанавливайте нагреватели самостоятельно. Диспетчерская служба для вызова сантехника из нашего района: +7 495 123-45-67
-                                                </p>
-
-                                            </md-card-content>
 
                                         </md-card>
-
                                     </div>
 
+
                                     <div class="col-md-6">
                                         <md-card>
-                                            <i class="flaticon-megaphone"></i>
                                             <md-card-title>
                                                 <md-card-title-text>
-                                                    <span class="md-headline">Проверка утечек газа в шестом подъезде:
-в среду 10 мая
-                                                        с 10:00 до 14:00 </span>
-
+                                                    <span class="md-headline">{{data.v2}}</span>
+                                                    <span class="md-subhead">Объёмный расход на обратке м3</span>
                                                 </md-card-title-text>
+
+
+
                                             </md-card-title>
-                                            <md-card-content>
-                                                <p>
-                                                    Даже если вы не слышите дома запах газа, у вас может быть утечка. В среду инженеры «Мосгаза» будут проверять утечки в квартирах нашего подъезда, чтобы вовремя заменить оборудование и защитить дом от взрыва.
-                                                </p>
-                                                <p>
-                                                    Пожалуйста, откройте сотрудникам, когда они позвонят в вашу квартиру. Спросите удостоверение.  Сотрудники проверят газовые печи и трубы специальными детекторами. Разбирать плиту или перекрывать газ не нужно.
-                                                </p>
 
-                                            </md-card-content>
-                                            <md-card-actions layout="row" layout-align="end center">
-                                                <md-button>Я буду дома</md-button>
-                                                <md-button>Меня не будет дома</md-button>
-                                            </md-card-actions>
                                         </md-card>
-
                                     </div>
 
                                 </div>
 
                             </md-content>
                         </md-tab>
+
 
                         <md-tab label="Капитальный ремонт">
                             <md-content class="md-padding">
@@ -320,7 +253,8 @@
                                             <md-card-title>
                                                 <md-card-title-text>
                                                     <span class="md-headline">500 000 тенге</span>
-                                                    <span class="md-subhead">Моя внесенная сумма на кап. ремонт</span>
+                                                    <span class="md-subhead">Текущие накопления на кап. ремонт
+</span>
                                                 </md-card-title-text>
 
                                                 <md-card-title-media>
@@ -334,6 +268,55 @@
                                             </md-card-title>
 
                                         </md-card>
+
+
+
+
+                                        <md-card>
+                                            <md-card-title>
+                                                <md-card-title-text>
+                                                    <span class="md-headline">10 000 тенге</span>
+                                                    <span class="md-subhead">Размер ежемесячных взносов на кап. ремонт
+
+</span>
+                                                </md-card-title-text>
+
+                                                <md-card-title-media>
+
+
+                                                    <i class="flaticon-kazakhstani-tenge"></i>
+
+
+                                                </md-card-title-media>
+
+                                            </md-card-title>
+
+                                        </md-card>
+
+
+                                        <md-card>
+                                            <md-card-title>
+                                                <md-card-title-text>
+                                                    <span class="md-headline">1 000 000 тенге</span>
+                                                    <span class="md-subhead">Текущие накопления дома на капитальный ремонт
+
+
+</span>
+                                                </md-card-title-text>
+
+                                                <md-card-title-media>
+
+
+                                                    <i class="flaticon-kazakhstani-tenge"></i>
+
+
+                                                </md-card-title-media>
+
+                                            </md-card-title>
+
+                                        </md-card>
+
+
                                     </div>
 
 
@@ -343,7 +326,8 @@
                                             <md-card-title>
                                                 <md-card-title-text>
                                                     <span class="md-headline">12.07.2018</span>
-                                                    <span class="md-subhead">Дата кап. ремонта дома</span>
+                                                    <span class="md-subhead">Дата проведения  последнего капитального ремонта
+</span>
                                                 </md-card-title-text>
 
                                                 <md-card-title-media>
@@ -367,165 +351,9 @@
                             </md-content>
                         </md-tab>
 
-                        <md-tab label="Запланированные работы по дому">
+                        <md-tab label="Информация о текущем пользовании общедомовым имуществом">
                             <md-content class="md-padding">
 
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <md-card>
-                                            <md-card-title>
-                                                <md-card-title-text>
-                                                    <span class="md-headline">12.07.2018</span>
-                                                    <span class="md-subhead">Ремонт внутридомовых инженерных систем электро-, тепло-, газо-, водоснабжения, водоотведения</span>
-                                                </md-card-title-text>
-
-                                                <md-card-title-media>
-
-
-                                                    <i class="flaticon-calendar"></i>
-
-
-                                                </md-card-title-media>
-
-
-                                            </md-card-title>
-
-
-
-                                        </md-card>
-                                    </div>
-
-
-                                    <div class="col-md-6">
-                                        <md-card>
-                                            <md-card-title>
-                                                <md-card-title-text>
-                                                    <span class="md-headline">12.07.2018</span>
-                                                    <span class="md-subhead">Ремонт или замену лифтового оборудования, признанного непригодным для эксплуатации, ремонт лифтовых шахт</span>
-                                                </md-card-title-text>
-
-                                                <md-card-title-media>
-
-
-                                                    <i class="flaticon-calendar"></i>
-
-
-                                                </md-card-title-media>
-
-
-                                            </md-card-title>
-
-
-
-                                        </md-card>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <md-card>
-                                            <md-card-title>
-                                                <md-card-title-text>
-                                                    <span class="md-headline">12.07.2018</span>
-                                                    <span class="md-subhead">Ремонт крыши</span>
-                                                </md-card-title-text>
-
-                                                <md-card-title-media>
-
-
-                                                    <i class="flaticon-calendar"></i>
-
-
-                                                </md-card-title-media>
-
-
-                                            </md-card-title>
-
-
-
-                                        </md-card>
-                                    </div>
-
-
-                                    <div class="col-md-6">
-                                        <md-card>
-                                            <md-card-title>
-                                                <md-card-title-text>
-                                                    <span class="md-headline">12.07.2018</span>
-                                                    <span class="md-subhead">Ремонт подвальных помещений, относящихся к общему имуществу в многоквартирном доме</span>
-                                                </md-card-title-text>
-
-                                                <md-card-title-media>
-
-
-                                                    <i class="flaticon-calendar"></i>
-
-
-                                                </md-card-title-media>
-
-
-                                            </md-card-title>
-
-
-
-                                        </md-card>
-                                    </div>
-                                </div>
-
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <md-card>
-                                            <md-card-title>
-                                                <md-card-title-text>
-                                                    <span class="md-headline">12.07.2018</span>
-                                                    <span class="md-subhead">Ремонт фасада</span>
-                                                </md-card-title-text>
-
-                                                <md-card-title-media>
-
-
-                                                    <i class="flaticon-calendar"></i>
-
-
-                                                </md-card-title-media>
-
-
-                                            </md-card-title>
-
-
-
-                                        </md-card>
-                                    </div>
-
-
-                                    <div class="col-md-6">
-                                        <md-card>
-                                            <md-card-title>
-                                                <md-card-title-text>
-                                                    <span class="md-headline">12.07.2018</span>
-                                                    <span class="md-subhead">Ремонт фундамента многоквартирного дома</span>
-                                                </md-card-title-text>
-
-                                                <md-card-title-media>
-
-
-                                                    <i class="flaticon-calendar"></i>
-
-
-                                                </md-card-title-media>
-
-
-                                            </md-card-title>
-
-
-
-                                        </md-card>
-                                    </div>
-                                </div>
 
 
 

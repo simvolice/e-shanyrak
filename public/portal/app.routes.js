@@ -99,4 +99,90 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 
       })
+
+      .state('housemanage', {
+          url: '/housemanage',
+          templateUrl: 'components/housemanage/housemanageView.html',
+
+
+      })
+
+      .state('home', {
+          url: '/home',
+          templateUrl: 'components/home/homeView.html',
+
+
+      })
+
+
+      .state('mainksk', {
+          url: '/mainksk',
+          templateUrl: 'components/mainksk/mainkskView.html',
+
+
+      })
+
+
+      .state('budgetksk', {
+          url: '/budgetksk',
+          templateUrl: 'components/budgetksk/budgetkskView.html',
+
+
+      })
+
+
+      .state('planksk', {
+          url: '/planksk',
+          templateUrl: 'components/planksk/plankskView.html',
+
+
+      })
+
+      .state('messageksk', {
+          url: '/messageksk',
+          templateUrl: 'components/messageksk/messagekskView.html',
+
+
+      })
+      .state('serviceksk', {
+          url: '/serviceksk',
+          templateUrl: 'components/serviceksk/servicekskView.html',
+
+
+      })
+
+      .state('mainsem', {
+          url: '/mainsem',
+          templateUrl: 'components/mainsem/mainsemView.html',
+
+
+      })
+
+      .state('financesem', {
+          url: '/financesem',
+          templateUrl: 'components/financesem/financesemView.html',
+
+
+      })
+
+      .state('powersem', {
+          url: '/powersem',
+          templateUrl: 'components/powersem/powersemView.html',
+
+
+      })
+
+      .state('datasem', {
+          url: '/datasem',
+          templateUrl: 'components/datasem/datasemView.html',
+
+
+      })
+
+      .state('notifsem', {
+          url: '/notifsem',
+          templateUrl: 'components/notifsem/notifsemView.html',
+
+
+      })
 });

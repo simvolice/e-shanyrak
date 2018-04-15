@@ -29,3 +29,10 @@ angular.module('app').factory("Deleteonepost", function($resource) {
 angular.module('app').factory("GetAllpost", function($resource) {
     return $resource("/getallpost");
 });
+
+
+
+
+angular.module('app').factory("GetOnepost", function($resource) {
+    return $resource("/getonepostfromdb");
+});

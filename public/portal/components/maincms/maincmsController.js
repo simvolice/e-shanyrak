@@ -4,7 +4,7 @@
 
 
 
-angular.module('app').controller('maincmsCtrl', function ($scope, $mdDialog, $mdToast, SaveMenu, Allmenus, $http, GetAllpost, Deleteonepost) {
+angular.module('app').controller('maincmsCtrl', function ($scope, $mdDialog, $mdToast, SaveMenu, Allmenus, $http, GetAllpost, Deleteonepost, GetOnepost, $rootScope) {
 
     var quill = null;
 
@@ -324,6 +324,170 @@ angular.module('app').controller('maincmsCtrl', function ($scope, $mdDialog, $md
 
         });
     };
+
+
+
+    $scope.updatePost = function (id, ev) {
+        GetOnepost.save({sessionToken: localStorage.getItem("sessionToken"), id: id}, function (result) {
+
+
+            if (result.code === 0) {
+
+
+                $("#videohead-pro").css("z-index", 50);
+
+                $mdDialog.show({
+                    controller: DialogControllerUpdatePost,
+                    locals:{data: result.resultFromDb, menusFlat: $scope.menusFlat},
+                    templateUrl: 'components/maincms/dialog_template.html',
+                    parent: angular.element(document.body),
+                    targetEvent: ev,
+                    clickOutsideToClose:true,
+                    fullscreen: true // Only for -xs, -sm breakpoints.
+                });
+
+
+
+            } else {
+
+
+
+                $mdToast.show(
+                    $mdToast.simple()
+                        .textContent('Операция закончилась неудачно')
+                        .position('left bottom')
+                        .hideDelay(3000)
+                );
+
+            }
+
+
+        });
+
+    };
+
+
+function DialogControllerUpdatePost($scope, data, menusFlat) {
+    var quillUpd = null;
+
+    setTimeout(function () {
+        quillUpd = new Quill('#editor-container-upd', {
+            modules: {
+
+                toolbar: '#toolbar-container-upd'
+            },
+            placeholder: 'Создай свою идеальную статью...',
+            theme: 'snow'
+        });
+
+
+
+        quillUpd.root.innerHTML = data.postHTML;
+
+    }, 350);
+
+
+
+    $scope.data = {
+
+        title: data.title,
+
+        selectedItem: data.menuUniqueKey,
+        menusFlat: menusFlat,
+        urlImg: data.urlImg,
+        readonly: true,
+        removable: true
+
+
+    };
+
+    var formdataUpd = new FormData();
+
+    $scope.getTheFilesUpd = function ($files) {
+
+
+
+        angular.forEach($files, function (value, key) {
+            formdataUpd.append(key, value);
+        });
+
+
+
+    };
+
+
+    $scope.updPost = function(){
+
+
+
+        formdataUpd.append('postHTML', quillUpd.root.innerHTML);
+        formdataUpd.append('menuUniqueKey', $scope.data.selectedItem);
+        formdataUpd.append('title', $scope.data.title);
+        formdataUpd.append('id', data._id);
+        formdataUpd.append('urlImg', JSON.stringify($scope.data.urlImg));
+
+
+        var request = {
+            method: 'POST',
+            url: '/updpost',
+            data: formdataUpd,
+            headers: {
+                'Content-Type': undefined,
+                'sessionToken': localStorage.getItem("sessionToken")
+            }
+        };
+
+
+        $http(request)
+            .then(function successCallback(response) {
+                formdataUpd = new FormData();
+                document.getElementById("file").value = null;
+
+
+
+
+
+
+
+                $mdToast.show(
+                    $mdToast.simple()
+                        .textContent('Вы успешно загрузили объект.')
+                        .position('left bottom')
+                        .hideDelay(3000)
+                );
+
+
+
+
+
+            }, function errorCallback(response) {
+                formdataUpd = new FormData();
+                document.getElementById("file").value = null;
+                $mdToast.show(
+                    $mdToast.simple()
+                        .textContent('Операция закончилась не удачно, попробуйте изменить данные.')
+                        .position('left bottom')
+                        .hideDelay(3000)
+                );
+            });
+
+
+
+
+
+
+    };
+
+
+    $scope.closeDialog = function () {
+        $("#videohead-pro").css("z-index", 1000);
+        $mdDialog.hide();
+    };
+
+
+}
+
+
 
 });
 

@@ -20,6 +20,7 @@ let PostService = require('../service/PostService');
 
 
 
+const request = require('request-promise-native');
 
 
 
@@ -212,6 +213,7 @@ router.post('/addpost', async (req, res, next) =>{
     fields["urlImg"] = [];
 
 
+
     if (files.length !== 0) {
 
 
@@ -221,7 +223,7 @@ router.post('/addpost', async (req, res, next) =>{
             itemFile.pipe(fs.createWriteStream(pathForWrite + path.basename(itemFile.path)));
 
 
-            fields.urlImg.push("uploads/" + path.basename(itemFile.path));
+            fields.urlImg.push({url: "uploads/" + path.basename(itemFile.path), fileName: itemFile.filename});
 
 
         }
@@ -296,6 +298,82 @@ router.get('/getonepost', async (req, res, next) =>{
 });
 
 
+
+router.post('/getonepostfromdb', async (req, res, next) =>{
+
+    let result = await PostService.getOnePostById(req.body.id);
+
+
+
+
+    res.json({"code": 0, "resultFromDb": result});
+
+
+
+});
+
+
+
+router.post('/updpost', async (req, res, next) =>{
+
+
+
+    const {files, fields} = await Busboy(req);
+    let pathForWrite = path.join(__dirname, "../public/uploads/");
+    fields.urlImg = JSON.parse(fields.urlImg);
+
+
+    if (files.length !== 0) {
+
+
+        for (let itemFile of files) {
+
+
+            itemFile.pipe(fs.createWriteStream(pathForWrite + path.basename(itemFile.path)));
+
+
+            fields.urlImg.push({url: "uploads/" + path.basename(itemFile.path), fileName: itemFile.filename});
+
+
+        }
+
+
+
+
+    }
+
+
+    if (fields.urlImg.length !== 0) {
+        for (const itemImg of fields.urlImg) {
+            delete itemImg.$$hashKey;
+        }
+    }
+
+
+
+    await PostService.updPost(fields);
+
+    res.json({"code": 0});
+
+
+});
+
+
+
+
+router.get('/getdata', async (req, res, next) =>{
+
+   let resultToken  = await request.get("http://193.42.142.125/rest/api/authenticate?username=astana&password=654321");
+   let result = await request.get(`http://193.42.142.125/rest/api/getdayarch?idCounter=606500&dtStart=14.4.2018&dtEnd=14.4.2018&token=${resultToken}`);
+
+
+
+   let resultClean = JSON.parse(result);
+
+
+    res.json({"code": 0, "resultFromDb": resultClean.aaData[0]});
+
+});
 
 
 

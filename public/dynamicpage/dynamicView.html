@@ -36,14 +36,15 @@
             <h6 style="margin-left: 30px">Прикрепленные файлы:
 
 
-                <md-chips>
+                <md-chips class="custom-chips" ng-model="data.urlImg" readonly="readonly"
+                          md-removable="removable">
+                    <md-chip-template>
+        <span>
+          <a href="../{{$chip.url}}" target="_blank">{{$chip.fileName}}</a>
+        </span>
+                    </md-chip-template>
 
-
-                <md-chip ng-repeat="data in data.urlImg"><a href="{{data}}" target="_blank">{{data}}</a></md-chip>
-
-
-            </md-chips>
-
+                </md-chips>
             </h6>
 
 

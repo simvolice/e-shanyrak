@@ -217,6 +217,81 @@
                         </md-tab>
 
 
+
+
+                        <md-tab label="Редактировать пост" ng-click="clkTab()">
+                            <md-content class="md-padding">
+
+
+                                <div class="row">
+                                    <div class="col-md-12 table-responsive">
+
+
+
+
+                                        <style type="text/css">
+                                            .tg  {border-collapse:collapse;border-spacing:0; width: 98.7%; margin-left: 8px;}
+                                            .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+                                            .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+                                            .tg .tg-hgcj{font-weight:bold;text-align:center; vertical-align:middle}
+                                            .tg .tg-baqh{text-align:center;vertical-align:middle}
+                                            .tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:middle}
+
+
+                                        </style>
+                                        <table class="tg table-striped">
+                                            <tr>
+                                                <th class="tg-hgcj">Заголовок статьи</th>
+                                                <th class="tg-hgcj">Дата создания</th>
+
+                                                <th class="tg-hgcj">Редактировать статью</th>
+                                            </tr>
+
+
+                                            <tbody>
+
+
+                                            <tr ng-repeat="data in allpost | filter:search">
+
+
+
+
+
+                                                <td class="tg-baqh">{{data.title}}</td>
+
+
+
+                                                <td class="tg-baqh">{{data.createAt | date : "dd.MM.y"}}</td>
+
+
+
+
+
+
+
+                                                <td class="tg-baqh"><i class="fa fa-edit" ng-click="updatePost(data._id, $event)" style="cursor: pointer"></i></td>
+
+
+                                            </tr>
+
+
+
+                                            </tbody>
+
+
+                                        </table>
+
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </md-content>
+                        </md-tab>
+
+
                         <md-tab label="Удалить пост" ng-click="clkTab()">
                             <md-content class="md-padding">
 

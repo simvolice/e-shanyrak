@@ -192,11 +192,19 @@ jQuery(document).ready(function($) {
                     window.location.replace("/portal/#!/maincms");
 
 
-                } else {
+                } else if (data.role === "user"){
 
-                    window.location.replace("/portal/#!/main");
+                    window.location.replace("/portal/#!/home");
 
-				}
+				}else if (data.role === "ksk"){
+
+                    window.location.replace("/portal/#!/mainksk");
+
+                }else if (data.role === "sem"){
+
+                    window.location.replace("/portal/#!/mainsem");
+
+                }
 
 
 
