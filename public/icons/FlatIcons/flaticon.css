@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 07/04/2018 12:40
+  	Creation date: 16/04/2018 17:25
   	*/
 
 @font-face {
@@ -29,14 +29,20 @@ font-style: normal;
 margin-left: 20px;
 }
 
-.flaticon-calendar:before { content: "\f100"; }
-.flaticon-kazakhstani-tenge:before { content: "\f101"; }
-.flaticon-megaphone:before { content: "\f102"; }
-.flaticon-tap-1:before { content: "\f103"; }
-.flaticon-tap:before { content: "\f104"; }
-.flaticon-radiator:before { content: "\f105"; }
-.flaticon-light-bulb:before { content: "\f106"; }
-.flaticon-green-energy:before { content: "\f107"; }
-.flaticon-bed:before { content: "\f108"; }
-.flaticon-house:before { content: "\f109"; }
-.flaticon-signing-the-contract:before { content: "\f10a"; }
+.flaticon-tools:before { content: "\f100"; }
+.flaticon-send-message:before { content: "\f101"; }
+.flaticon-kids-couple:before { content: "\f102"; }
+.flaticon-classroom:before { content: "\f103"; }
+.flaticon-medical-kit:before { content: "\f104"; }
+.flaticon-security:before { content: "\f105"; }
+.flaticon-calendar:before { content: "\f106"; }
+.flaticon-kazakhstani-tenge:before { content: "\f107"; }
+.flaticon-megaphone:before { content: "\f108"; }
+.flaticon-tap-1:before { content: "\f109"; }
+.flaticon-tap:before { content: "\f10a"; }
+.flaticon-radiator:before { content: "\f10b"; }
+.flaticon-light-bulb:before { content: "\f10c"; }
+.flaticon-green-energy:before { content: "\f10d"; }
+.flaticon-bed:before { content: "\f10e"; }
+.flaticon-house:before { content: "\f10f"; }
+.flaticon-signing-the-contract:before { content: "\f110"; }

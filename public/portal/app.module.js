@@ -15,6 +15,27 @@ app.config(function ($locationProvider, $translateProvider, $mdDateLocaleProvide
 
 
 
+    moment.locale("ru");
+    var localeDate = moment.localeData();
+
+    $mdDateLocaleProvider.months = localeDate.months();
+    $mdDateLocaleProvider.shortMonths = localeDate.monthsShort();
+    $mdDateLocaleProvider.days = localeDate.weekdays();
+    $mdDateLocaleProvider.shortDays = localeDate.weekdaysMin();
+
+
+
+
+
+    $mdDateLocaleProvider.formatDate = function(date) {
+        var m = moment(date);
+        return m.format('L');
+    };
+
+
+
+    $mdDateLocaleProvider.firstDayOfWeek = 1;
+
 
 
 
@@ -78,7 +99,7 @@ app.controller('MainCtrl', function ($scope, $state, $timeout, $translate, $root
 
         {state: "myflat", title: "Моя квартира", icon: "fa-tv"},
 
-        {state: "housemanage", title: "Управление домом", icon: "fa-tv"},
+        {state: "housemanage", title: "Управление домом", icon: "fa-gavel"},
 
         {state: "main", title: "Смарт контракты", icon: "fa-file-alt"},
 

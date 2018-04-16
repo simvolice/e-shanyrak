@@ -3,7 +3,7 @@ let router = express.Router();
 
 
 const Busboy = require('async-busboy');
-
+var moment = require('moment-timezone');
 
 let bcryptjs = require('bcryptjs');
 let path = require('path');
@@ -361,17 +361,28 @@ router.post('/updpost', async (req, res, next) =>{
 
 
 
-router.get('/getdata', async (req, res, next) =>{
+router.post('/getdata', async (req, res, next) =>{
+    moment.locale("ru");
+
 
    let resultToken  = await request.get("http://193.42.142.125/rest/api/authenticate?username=astana&password=654321");
-   let result = await request.get(`http://193.42.142.125/rest/api/getdayarch?idCounter=606500&dtStart=14.4.2018&dtEnd=14.4.2018&token=${resultToken}`);
+
+
+
+   let result = await request.get(`http://193.42.142.125/rest/api/getdayarch?idCounter=606500&dtStart=${moment.tz(req.body.dateFrom, "Asia/Dhaka").format("l")}&dtEnd=${moment.tz(req.body.dateTo, "Asia/Dhaka").format("l")}&token=${resultToken}`);
 
 
 
    let resultClean = JSON.parse(result);
 
 
-    res.json({"code": 0, "resultFromDb": resultClean.aaData[0]});
+    res.json({"code": 0, "resultFromDb": resultClean});
+
+
+
+
+
+
 
 });
 

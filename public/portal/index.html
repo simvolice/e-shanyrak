@@ -29,6 +29,11 @@
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
 	<title>E-SHANYRAQ</title>
+
+
+
+
+
 </head>
 <body ng-controller="MainCtrl">
 <div id="sidebar-bg">
@@ -165,9 +170,9 @@
 				<h3>Уведомления</h3>
 				<div id="header-notification-menu-padding">
 					<ul id="header-user-notification-list">
-						<li><a href="" ng-click="goToProfile()">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. <div class="header-user-notify-time">21 час назад</div></a></li>
-						<li><a href="" ng-click="goToProfile()">Donec vitae lacus id arcu molestie mollis. <div class="header-user-notify-time">3 дня назад</div></a></li>
-						<li><a href="" ng-click="goToProfile()">Aenean vitae lectus non purus facilisis imperdiet. <div class="header-user-notify-time">5 дней назад</div></a></li>
+						<li><img src="assets/img/alarm.svg" alt=""><a href="" ng-click="goToProfile()" style="font-weight: bold; color: black">Необходимо оплатить услуги до<span style="font-weight: bolder"> 25 октября.</span> <div class="header-user-notify-time">21 час назад</div></a></li>
+						<li><img src="assets/img/alarm.svg" alt=""><a href="" ng-click="goToProfile()" style="font-weight: bold; color: black">Вы подходите к выходу за лимит потребления воды. <div class="header-user-notify-time">3 дня назад</div></a></li>
+
 					</ul>
 					<div class="clearfix"></div>
 				</div><!-- close #header-user-profile-menu -->
@@ -213,6 +218,9 @@
 			<li class="normal-item-pro" style="white-space: normal">
 				<a ui-sref="{{data.state}}" style="padding: 10px 0 10px 0;">
 					<span class="fa {{data.icon}}"></span>
+                    <span class="user-notification-count" style="position: absolute;
+    left: 100px;
+    font-size: 10px;">3</span>
 					{{data.title}}
 				</a>
 			</li>
@@ -255,7 +263,7 @@
 <script src="../js/libs/web3.min.js" defer></script><!-- Bootstrap Main JS -->
 <script src="../js/libs/abi-decoder.js" defer></script><!-- Bootstrap Main JS -->
 <script src="assets/js/quill.min.js" defer></script><!-- Bootstrap Main JS -->
-
+<script src="assets/js/moment-with-locales.min.js"></script><!-- Bootstrap Main JS -->
 
 <!-- All JavaScript in Footer -->
 
@@ -328,7 +336,6 @@
 <script src="../js/afterglow.min.js" defer></script><!-- Video Player JS Plugin -->
 <script src="../js/script.js" defer></script><!-- Custom Document Ready JS -->
 <script src="../js/script-dashboard.js" defer></script><!-- Custom Document Ready for Dashboard Only JS -->
-
 
 
 <!--Start of Tawk.to Script-->
