@@ -30,7 +30,7 @@ angular.module('app').controller('MyHouseCtrl', function ($scope, $mdDialog, $md
 
     $scope.sendToSrv = function () {
 
-
+        $scope.allSumArr = [];
 
 
         var request = {
@@ -55,7 +55,7 @@ angular.module('app').controller('MyHouseCtrl', function ($scope, $mdDialog, $md
                 let dataP2 = [];
                 let dataV1 = [];
                 let dataV2 = [];
-                $scope.allSumArr = [];
+
 
                 $scope.resultFromDb = response.data.resultFromDb;
 

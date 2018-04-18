@@ -2,7 +2,7 @@
 const MongoClient = require('mongodb').MongoClient;
 
 const Logger = require('mongodb').Logger;
-Logger.setLevel('error');
+Logger.setLevel(process.env.DB_LOG_LEVEL);
 
 
 let state = {

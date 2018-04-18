@@ -26,25 +26,6 @@ angular.module('land').controller('mainPageCtrl', function ($sce, $scope, $state
 
 
 
-    var map;
-
-    DG.then(function () {
-        map = DG.map('map', {
-            center: [51.135774, 71.360891],
-            zoom: 18
-        });
-
-
-
-
-        DG.marker([51.135774, 71.360891]).addTo(map).bindPopup(`Адрес: ул. Ч. Айтматова, 31, Управляющая компания: "Тестовая", Обслуживающая компания: "Тестовая", Участковый: "Иванов И.И"`);
-
-    });
-
-
-
-
-
 
 
 });

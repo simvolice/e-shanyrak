@@ -31,14 +31,14 @@ hr, p {
 }
 
 body, input, select, textarea {
-    font-family: Lato, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.8;
     color: #555;
     font-size: 15px
 }
 
 .btn, h1, h2, h3, h4, h5, h6, nav#site-navigation-pro {
-    font-family: Montserrat, sans-serif
+    font-family: 'Roboto', sans-serif
 }
 
 hr {
@@ -349,8 +349,8 @@ nav#site-navigation-pro {
     -webkit-font-smoothing: subpixel-antialiased;
     text-transform: none;
     letter-spacing: 0;
-    background: #232323;
-    border: 1px solid rgba(255, 255, 255, .08);
+    background: #ffffff;
+    border: 1px solid rgb(201, 201, 201);
     border-top: none;
     padding: 18px 32px;
     margin-left: 10px
@@ -372,11 +372,11 @@ nav#site-navigation-pro {
 
 .sf-menu li.sfHover li a, .sf-menu li.sfHover li.sfHover li a, .sf-menu li.sfHover li.sfHover li.sfHover li a, .sf-menu li.sfHover li.sfHover li.sfHover li.sfHover li a, .sf-menu li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover li a {
     background: rgba(0, 0, 0, 0);
-    color: rgba(255, 255, 255, .6)
+    color: rgb(0, 0, 0)
 }
 
 .sf-menu li.sfHover li a:hover, .sf-menu li.sfHover li li a:hover, .sf-menu li.sfHover li li li a:hover, .sf-menu li.sfHover li li li li a:hover, .sf-menu li.sfHover li li li li li a:hover, .sf-menu li.sfHover li.sfHover a, .sf-menu li.sfHover li.sfHover li.sfHover a, .sf-menu li.sfHover li.sfHover li.sfHover a:hover, .sf-menu li.sfHover li.sfHover li.sfHover li.sfHover a, .sf-menu li.sfHover li.sfHover li.sfHover li.sfHover a:hover, .sf-menu li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover a, .sf-menu li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover a:hover, .sf-menu li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover li.sfHover a {
-    color: #fff;
+    color: #000000;
     background: rgba(0, 0, 0, 0)
 }
 
@@ -432,7 +432,7 @@ nav#site-navigation-pro {
 
 .circle-rating-pro span, ul#vertical-sidebar-nav.sf-menu, ul.page-numbers li a, ul.page-numbers li span.page-numbers {
     font-weight: 400;
-    font-family: Montserrat, sans-serif
+    font-family: 'Roboto', sans-serif
 }
 
 #sidebar-bg:after, #sidebar-bg:before, #video-logo-background:after, #video-logo-background:before {
@@ -794,7 +794,7 @@ ul#vertical-sidebar-nav.sf-menu li span {
 #header-user-profile-click, #header-user-profile-menu ul li a {
     color: #888;
     font-size: 13px;
-    font-family: Montserrat, sans-serif
+    font-family: 'Roboto', sans-serif
 }
 
 ul#vertical-sidebar-nav.sf-menu li ul {
@@ -993,7 +993,7 @@ span.user-notification-count {
 
 #header-user-notification-list li a {
     display: block;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #888;
     padding: 10px 20px 10px 64px;
@@ -1028,7 +1028,7 @@ span.user-notification-count {
 
 #video-search-header input {
     font-size: 15px;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: #444;
     background: 0 0;
@@ -1144,7 +1144,7 @@ span.user-notification-count {
     position: relative;
     padding-left: 28px;
     margin-bottom: 12px;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 13px;
     color: #777;
     cursor: pointer;
@@ -1438,7 +1438,7 @@ span.user-notification-count {
 }
 
 .asRange .asRange-pointer span.asRange-tip {
-    font-family: Lato, sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #333;
     font-size: 13px;
     background: 0 0;
@@ -1468,7 +1468,7 @@ span.user-notification-count {
 
 #search-mobile-nav-pro input {
     font-size: 13px;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: #444;
     background: url(../images/mobile-search-icon.png) 20px 13px no-repeat;
@@ -1702,7 +1702,7 @@ ul.progression-studios-staring-slider li img {
 }
 
 .flexslider.progression-studios-dashboard-slider .circle-rating-pro span {
-    font-family: Montserrat, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     position: absolute;
     top: 0;
@@ -2183,7 +2183,7 @@ a.movie-detail-header-play-btn i {
 }
 
 .pricing-plans-page-container ul li, .social-icon-login, a.not-a-member-pro, ul.checkmark-list-pro, ul.dashboard-sub-menu li a, ul.welcome-features li {
-    font-family: Montserrat, sans-serif
+    font-family: 'Roboto', sans-serif
 }
 
 .rating-pro > label.selected:before, .rating-pro > label.selected ~ label:before, .rating-pro > label:hover:before, .rating-pro > label:hover ~ label:before {
@@ -3265,7 +3265,7 @@ ul.checkmark-list-pro li:before {
 
 .pricing-table-pro ul li {
     color: rgba(51, 51, 51, .65);
-    font-family: Montserrat, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     margin-bottom: 10px
 }
@@ -3657,7 +3657,7 @@ header#masthead-pro #mobile-navigation-pro {
     border-bottom: 1px solid rgba(0, 0, 0, .1);
     box-shadow: 0 15px 20px rgba(0, 0, 0, .05);
     font-weight: 600;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     letter-spacing: .04em
 }
