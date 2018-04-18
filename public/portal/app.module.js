@@ -4,7 +4,7 @@
 
 
 
-var app = angular.module('app', ['ngMaterial', 'ui.router', 'ngMessages', 'ngResource', 'ngSanitize', 'pascalprecht.translate']);
+var app = angular.module('app', ['ngMaterial', 'ui.router', 'ngMessages', 'ngResource', 'ngSanitize', 'pascalprecht.translate', 'ngMaterialDatePicker']);
 
 
 
@@ -22,7 +22,6 @@ app.config(function ($locationProvider, $translateProvider, $mdDateLocaleProvide
     $mdDateLocaleProvider.shortMonths = localeDate.monthsShort();
     $mdDateLocaleProvider.days = localeDate.weekdays();
     $mdDateLocaleProvider.shortDays = localeDate.weekdaysMin();
-
 
 
 

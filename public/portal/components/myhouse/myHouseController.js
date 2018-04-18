@@ -8,7 +8,6 @@ angular.module('app').controller('MyHouseCtrl', function ($scope, $mdDialog, $md
 
 
 
-
     function summArr(arr) {
         if (arr.length === 0){
 

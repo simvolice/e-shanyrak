@@ -365,11 +365,14 @@ router.post('/getdata', async (req, res, next) =>{
     moment.locale("ru");
 
 
+
+
+
    let resultToken  = await request.get("http://193.42.142.125/rest/api/authenticate?username=astana&password=654321");
 
 
 
-   let result = await request.get(`http://193.42.142.125/rest/api/getdayarch?idCounter=606500&dtStart=${moment.tz(req.body.dateFrom, "Asia/Dhaka").format("l")}&dtEnd=${moment.tz(req.body.dateTo, "Asia/Dhaka").format("l")}&token=${resultToken}`);
+   let result = await request.get(`http://193.42.142.125/rest/api/gethourarch?idCounter=606500&dtStart=${moment.tz(req.body.dateFrom, "Asia/Dhaka").format("l")} ${moment.tz(req.body.timeFrom, "Asia/Dhaka").format("LTS")}&dtEnd=${moment.tz(req.body.dateTo, "Asia/Dhaka").format("l")} ${moment.tz(req.body.timeTo, "Asia/Dhaka").format("LTS")}&token=${resultToken}`);
 
 
 
