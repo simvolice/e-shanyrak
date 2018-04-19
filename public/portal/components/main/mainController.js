@@ -6,7 +6,7 @@
 
 angular.module('app').controller('HomePageCtrl', function ($scope, $mdDialog, $mdToast, AddTransactionHash, GetAllTransactionHash, $rootScope) {
 
-    var web3 = new Web3('http://localhost:8545');
+    var web3 = new Web3('https://rpc.e-shaniraq.kz');
 
     const testABI = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"propforsaves","outputs":[{"name":"jsStringifyObject","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_address","type":"address"}],"name":"getDatajsStringifyObject","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_address","type":"address"},{"name":"_jsStringifyObject","type":"string"}],"name":"setDatajsStringifyObject","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}];
     abiDecoder.addABI(testABI);
@@ -159,15 +159,39 @@ angular.module('app').controller('HomePageCtrl', function ($scope, $mdDialog, $m
             nameContract: "",
             allOrgs: [
 
-                {_id: 0, name: "Астанаэнергосбыт"},
+                {_id: 0, name: "Транстелеком"},
 
 
-                {_id: 1, name: "Астана-Тазарту"},
-                {_id: 2, name: "Астана газ сервис"},
-                {_id: 3, name: "Астана су арнасы"},
-                {_id: 4, name: "Лифтовые службы в г. Астана"},
-                {_id: 5, name: "Клининговая компания"},
-
+                {_id: 1, name: "Казахтелеком"},
+                {_id: 2, name: "Дукат"},
+                {_id: 3, name: "Мегател"},
+                {_id: 4, name: "Telbi IP телефония"},
+                {_id: 5, name: "KeyCom IP телефония"},
+                {_id: 6, name: "Радиобайланыс"},
+                {_id: 7, name: "IDPhone"},
+                {_id: 8, name: "Beeline"},
+                {_id: 9, name: "2DayTelecom"},
+                {_id: 10, name: "KazVoIP"},
+                {_id: 11, name: "AlmaTV"},
+                {_id: 12, name: "SCS Telecom Astana"},
+                {_id: 13, name: "Netring"},
+                {_id: 14, name: "Элитком"},
+                {_id: 15, name: "Digital tv"},
+                {_id: 16, name: "Caspio HD"},
+                {_id: 17, name: "Триколор ТВ"},
+                {_id: 18, name: "Megaline - Казахтелеком"},
+                {_id: 19, name: "Beeline интернет дома"},
+                {_id: 20, name: "Транстелеком"},
+                {_id: 21, name: "ASTEL"},
+                {_id: 22, name: "ICON"},
+                {_id: 23, name: "KazTransCom"},
+                {_id: 24, name: "Kcell 4G"},
+                {_id: 25, name: "Tele2 4G"},
+                {_id: 26, name: "IdNet - казахтелеком"},
+                {_id: 27, name: "Астана - Тазарту"},
+                {_id: 28, name: "Астанаэнергосбыт"},
+                {_id: 29, name: "Астана су арнасы"},
+                {_id: 30, name: "АО Астана - РЭК"}
 
 
 
@@ -202,7 +226,7 @@ angular.module('app').controller('HomePageCtrl', function ($scope, $mdDialog, $m
 
 
             //TODO Всегда надо диплоить контракт, чтобы забрать адрес
-            var newContractInstance = new web3.eth.Contract([{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"propforsaves","outputs":[{"name":"jsStringifyObject","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_address","type":"address"}],"name":"getDatajsStringifyObject","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_address","type":"address"},{"name":"_jsStringifyObject","type":"string"}],"name":"setDatajsStringifyObject","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}], "0x991f6c686227be66999e8e542ddd8D28c5e49Bcf", {
+            var newContractInstance = new web3.eth.Contract([{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"propforsaves","outputs":[{"name":"jsStringifyObject","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_address","type":"address"}],"name":"getDatajsStringifyObject","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_address","type":"address"},{"name":"_jsStringifyObject","type":"string"}],"name":"setDatajsStringifyObject","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}], "0x72D0b9AE42c1037063914f8634FcFf7D401FdBb0", {
                 from: web3.eth.defaultAccount,
                 gasPrice: '0',
                 gas: 1500000,

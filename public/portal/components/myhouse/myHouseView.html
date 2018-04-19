@@ -83,46 +83,335 @@
 
                                         <div class="row">
                                             <div class="col-md-12">
+
+
                                                 <md-card>
                                                     <md-card-title>
                                                         <md-card-title-text>
 
+
+                                                            <span class="md-title" style="margin-top: -20px;margin-bottom: 20px;">Последние показания за сутки на: {{dateNow}}</span>
+
+
                                                             <div class="row">
+
+
+
                                                                 <div class="col-md-4">
-                                                                    <md-input-container>
-
-
-                                                                        <label>Выберите период с</label>
-                                                                        <md-datepicker ng-model="data.dateFrom" md-open-on-focus></md-datepicker>
-
-
-                                                                    </md-input-container>
 
 
 
 
-                                                                    <input mdc-datetime-picker="" date="false" time="true" type="text" id="time2"
-                                                                           placeholder="Выберите время с" min-date="minDate" format="HH:mm" ng-model="data.timeFrom" class=" md-input"
-                                                                           readonly="readonly">
+
+                                                                    <md-card>
+                                                                        <md-card-title>
+                                                                            <md-card-title-text>
+                                                                                <span class="md-headline">{{qlast}}</span>
+                                                                                <span class="md-subhead">Теплопотребление, в Гкал</span>
+                                                                            </md-card-title-text>
+
+
+                                                                            <md-card-title-media>
+
+
+                                                                                <i class="flaticon-radiator"></i>
+
+
+                                                                            </md-card-title-media>
+
+
+                                                                        </md-card-title>
+
+                                                                    </md-card>
+
+                                                                </div>
+
+                                                                <div class="col-md-4">
+                                                                    <md-card>
+                                                                        <md-card-title>
+                                                                            <md-card-title-text>
+                                                                                <span class="md-headline">{{t1last}}</span>
+                                                                                <span class="md-subhead">Температура на подаче, в Цельсиях</span>
+                                                                            </md-card-title-text>
+
+
+                                                                            <md-card-title-media>
+
+
+                                                                                <i class="flaticon-radiator"></i>
+
+
+                                                                            </md-card-title-media>
+
+
+                                                                        </md-card-title>
+
+                                                                    </md-card>
+                                                                </div>
+
+
+
+
+
+                                                                <div class="col-md-4">
+
+                                                                    <md-card>
+                                                                        <md-card-title>
+                                                                            <md-card-title-text>
+                                                                                <span class="md-headline">{{t2last}}</span>
+                                                                                <span class="md-subhead">Температура на обратке, в Цельсиях</span>
+                                                                            </md-card-title-text>
+
+
+                                                                            <md-card-title-media>
+
+
+                                                                                <i class="flaticon-radiator"></i>
+
+
+                                                                            </md-card-title-media>
+
+
+                                                                        </md-card-title>
+
+                                                                    </md-card>
+
+
+                                                                </div>
+
+
+
+
+
+
+
+
+                                                            </div>
+
+
+
+
+                                                            <div class="row">
+
+                                                                <div class="col-md-4">
+
+                                                                    <md-card>
+                                                                        <md-card-title>
+                                                                            <md-card-title-text>
+                                                                                <span class="md-headline">{{m1last}}</span>
+                                                                                <span class="md-subhead">Массовый расход на подаче, в тоннах</span>
+                                                                            </md-card-title-text>
+
+
+                                                                            <md-card-title-media>
+
+
+                                                                                <i class="flaticon-radiator"></i>
+
+
+                                                                            </md-card-title-media>
+
+
+                                                                        </md-card-title>
+
+                                                                    </md-card>
+
+                                                                </div>
+
+                                                                <div class="col-md-4">
+
+
+                                                                    <md-card>
+                                                                        <md-card-title>
+                                                                            <md-card-title-text>
+                                                                                <span class="md-headline">{{m2last}}</span>
+                                                                                <span class="md-subhead">Массовый расход на обратке, в тоннах</span>
+                                                                            </md-card-title-text>
+
+
+                                                                            <md-card-title-media>
+
+
+                                                                                <i class="flaticon-radiator"></i>
+
+
+                                                                            </md-card-title-media>
+
+
+                                                                        </md-card-title>
+
+                                                                    </md-card>
+
+
+                                                                </div>
+                                                                <div class="col-md-4">
+
+
+
+                                                                    <md-card>
+                                                                        <md-card-title>
+                                                                            <md-card-title-text>
+                                                                                <span class="md-headline">{{p1last}}</span>
+                                                                                <span class="md-subhead">Давление на подаче, в Ат</span>
+                                                                            </md-card-title-text>
+
+
+                                                                            <md-card-title-media>
+
+
+                                                                                <i class="flaticon-radiator"></i>
+
+
+                                                                            </md-card-title-media>
+
+
+                                                                        </md-card-title>
+
+                                                                    </md-card>
+
+
+
+                                                                </div>
+
+                                                            </div>
+
+
+                                                            <div class="row">
+
+
+
+                                                                <div class="col-md-4">
+
+
+                                                                    <md-card>
+                                                                        <md-card-title>
+                                                                            <md-card-title-text>
+                                                                                <span class="md-headline">{{p2last}}</span>
+                                                                                <span class="md-subhead">Давление на обратке, в Ат</span>
+                                                                            </md-card-title-text>
+
+
+                                                                            <md-card-title-media>
+
+
+                                                                                <i class="flaticon-radiator"></i>
+
+
+                                                                            </md-card-title-media>
+
+
+                                                                        </md-card-title>
+
+                                                                    </md-card>
+
+
+
+                                                                </div>
+                                                                <div class="col-md-4">
+
+
+                                                                    <md-card>
+                                                                        <md-card-title>
+                                                                            <md-card-title-text>
+                                                                                <span class="md-headline">{{v1last}}</span>
+                                                                                <span class="md-subhead">Объёмный расход на подаче, в м<sup>3</sup></span>
+                                                                            </md-card-title-text>
+
+
+                                                                            <md-card-title-media>
+
+
+                                                                                <i class="flaticon-radiator"></i>
+
+
+                                                                            </md-card-title-media>
+
+
+                                                                        </md-card-title>
+
+                                                                    </md-card>
+
+
+
+                                                                </div>
+                                                                <div class="col-md-4">
+
+
+                                                                    <md-card>
+                                                                        <md-card-title>
+                                                                            <md-card-title-text>
+                                                                                <span class="md-headline">{{v2last}}</span>
+                                                                                <span class="md-subhead">Объёмный расход на обратке, в м<sup>3</sup></span>
+                                                                            </md-card-title-text>
+
+
+                                                                            <md-card-title-media>
+
+
+                                                                                <i class="flaticon-radiator"></i>
+
+
+                                                                            </md-card-title-media>
+
+
+                                                                        </md-card-title>
+
+                                                                    </md-card>
+
+
+
+                                                                </div>
+
+
+
+
+                                                            </div>
+
+
+
+
+
+                                                        </md-card-title-text>
+
+
+
+                                                    </md-card-title>
+
+                                                </md-card>
+
+
+
+
+                                                <md-card>
+                                                    <md-card-title>
+                                                        <md-card-title-text>
+
+
+                                                            <span class="md-title" style="margin-top: -20px;margin-bottom: 20px;">Суточные показания</span>
+
+
+                                                            <div class="row text-center">
+                                                                <div class="col-md-4">
+                                                                    <div flex-gt-xs>
+
+
+                                                                        <label>Выберите дату с</label>
+                                                                        <md-datepicker ng-model="data.dateFrom" md-placeholder="Выберите дату с" md-open-on-focus ng-change="dateFromChange()"></md-datepicker>
+                                                                    </div>
+
+
 
 
                                                                 </div>
 
 
                                                                 <div class="col-md-4">
-                                                                    <md-input-container>
-
-                                                                        <label>Выберите период по</label>
-                                                                        <md-datepicker ng-model="data.dateTo" md-open-on-focus md-min-date="data.dateFrom"></md-datepicker>
+                                                                    <div flex-gt-xs>
 
 
-                                                                    </md-input-container>
-
-
-
-                                                                    <input mdc-datetime-picker="" date="false" time="true" type="text" id="time1"
-                                                                           placeholder="Выберите время по" min-date="minDate" format="HH:mm" ng-model="data.timeTo" class=" md-input"
-                                                                           readonly="readonly">
+                                                                        <label>Выберите дату по</label>
+                                                                        <md-datepicker ng-model="data.dateTo" md-placeholder="Выберите дату по" md-open-on-focus md-min-date="data.dateFrom"></md-datepicker>
+                                                                    </div>
 
 
                                                                 </div>
@@ -152,7 +441,7 @@
 
 
 
-                                                <div id="showChart" style="visibility: hidden">
+                                                <div id="showChart" style="display: none">
 
 
                                                     <md-card>
@@ -460,6 +749,370 @@
                                                 </div>
 
 
+
+
+
+
+                                                <md-card>
+                                                    <md-card-title>
+                                                        <md-card-title-text>
+
+
+                                                            <span class="md-title" style="margin-top: -20px;margin-bottom: 20px;">Почасовые показания</span>
+
+
+                                                            <div class="row text-center">
+                                                                <div class="col-md-4">
+                                                                    <div flex-gt-xs>
+
+
+                                                                        <label>Выберите день</label>
+                                                                        <md-datepicker ng-model="data.dateFromHoure" md-placeholder="Выберите день" md-open-on-focus></md-datepicker>
+                                                                    </div>
+
+
+
+
+                                                                </div>
+
+
+
+
+                                                                <div class="col-md-4">
+                                                                    <md-button class="md-raised md-primary" style="margin-top: 42px;" ng-click="sendToSrvHoure()">Получить показатели</md-button>
+
+
+                                                                </div>
+
+                                                            </div>
+
+
+
+
+
+
+
+                                                        </md-card-title-text>
+
+
+
+                                                    </md-card-title>
+
+                                                </md-card>
+
+
+
+
+                                                <div id="showChartHoure" style="display: none">
+
+
+                                                    <md-card>
+                                                        <md-card-title>
+                                                            <md-card-title-text>
+                                                                <span class="md-headline">{{gkalInSumH.toFixed(3)}} Гкал / {{gkalInCurrencyH.toFixed(2)}} тенге</span>
+                                                                <span class="md-subhead">Суммарное теплопотребление</span>
+                                                            </md-card-title-text>
+
+
+                                                            <md-card-title-media>
+
+
+                                                                <i class="flaticon-radiator"></i>
+
+
+                                                            </md-card-title-media>
+
+
+                                                        </md-card-title>
+
+                                                    </md-card>
+
+
+
+                                                    <md-card>
+                                                        <md-card-title>
+                                                            <md-card-title-text>
+
+
+                                                                <span class="md-title">Теплопотребление, в Гкал</span>
+
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+
+                                                                        <div id="chartqh"></div>
+
+                                                                    </div>
+
+                                                                </div>
+
+
+
+
+
+
+
+                                                            </md-card-title-text>
+
+
+
+                                                        </md-card-title>
+
+                                                    </md-card>
+
+
+
+                                                    <md-card>
+                                                        <md-card-title>
+                                                            <md-card-title-text>
+
+
+                                                                <span class="md-title">Температура, в Цельсиях</span>
+
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+
+                                                                        <div id="chartth"></div>
+
+                                                                    </div>
+
+                                                                </div>
+
+
+
+
+
+
+
+                                                            </md-card-title-text>
+
+
+
+                                                        </md-card-title>
+
+                                                    </md-card>
+
+                                                    <md-card>
+                                                        <md-card-title>
+                                                            <md-card-title-text>
+
+
+                                                                <span class="md-title">Масса, в тоннах</span>
+
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+
+                                                                        <div id="chartmh"></div>
+
+                                                                    </div>
+
+                                                                </div>
+
+
+
+
+
+
+
+                                                            </md-card-title-text>
+
+
+
+                                                        </md-card-title>
+
+                                                    </md-card>
+
+
+
+                                                    <md-card>
+                                                        <md-card-title>
+                                                            <md-card-title-text>
+
+
+                                                                <span class="md-title">Давление, в Aт</span>
+
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+
+                                                                        <div id="chartph"></div>
+
+                                                                    </div>
+
+                                                                </div>
+
+
+
+
+
+
+
+                                                            </md-card-title-text>
+
+
+
+                                                        </md-card-title>
+
+                                                    </md-card>
+
+
+                                                    <md-card>
+                                                        <md-card-title>
+                                                            <md-card-title-text>
+
+
+                                                                <span class="md-title">Объёмный расход, в м3</span>
+
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+
+                                                                        <div id="chartvh"></div>
+
+                                                                    </div>
+
+                                                                </div>
+
+
+
+
+
+
+
+                                                            </md-card-title-text>
+
+
+
+                                                        </md-card-title>
+
+                                                    </md-card>
+
+
+
+                                                    <md-card>
+                                                        <md-card-title>
+                                                            <md-card-title-text>
+
+
+                                                                <span class="md-title">Все показатели</span>
+
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+
+
+
+                                                                        <style type="text/css">
+                                                                            tfoot {font-weight: bold; background-color: #f2f2f2;}
+                                                                            .tg  {border-collapse:collapse;border-spacing:0; width: 100%;}
+                                                                            .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+                                                                            .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+                                                                            .tg .tg-hgcj{font-weight:bold;text-align:center; vertical-align:middle}
+                                                                            .tg .tg-baqh{text-align:right;vertical-align:middle}
+                                                                            .tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:middle}
+
+
+                                                                        </style>
+                                                                        <table class="tg table-striped">
+                                                                            <tr>
+                                                                                <th class="tg-hgcj">Дата</th>
+                                                                                <th class="tg-hgcj">Теплопотребление, в Гкал</th>
+
+                                                                                <th class="tg-hgcj">Температура на подаче, в Цельсиях</th>
+                                                                                <th class="tg-hgcj">Температура на обратке, в Цельсиях</th>
+
+                                                                                <th class="tg-hgcj">Массовый расход на подаче, в тоннах</th>
+                                                                                <th class="tg-hgcj">Массовый расход на обратке, в тоннах</th>
+
+                                                                                <th class="tg-hgcj">Давление на подаче, в Ат</th>
+                                                                                <th class="tg-hgcj">Давление на обратке, в Ат</th>
+
+                                                                                <th class="tg-hgcj">Объёмный расход на подаче, в м3</th>
+                                                                                <th class="tg-hgcj">Объёмный расход на обратке, в м3</th>
+                                                                            </tr>
+
+
+                                                                            <tbody>
+
+
+                                                                            <tr ng-repeat="data in resultFromDbH.aaData | filter:search">
+
+
+
+
+
+                                                                                <td class="tg-baqh">{{data.truedate}}</td>
+
+                                                                                <td class="tg-baqh">{{data.q}}</td>
+
+
+
+                                                                                <td class="tg-baqh">{{data.t1}}</td>
+                                                                                <td class="tg-baqh">{{data.t2}}</td>
+
+                                                                                <td class="tg-baqh">{{data.m1}}</td>
+                                                                                <td class="tg-baqh">{{data.m2}}</td>
+
+                                                                                <td class="tg-baqh">{{data.p1}}</td>
+                                                                                <td class="tg-baqh">{{data.p2}}</td>
+
+                                                                                <td class="tg-baqh">{{data.v1}}</td>
+                                                                                <td class="tg-baqh">{{data.v2}}</td>
+
+
+
+                                                                            </tr>
+
+
+
+                                                                            </tbody>
+
+
+                                                                            <tfoot>
+
+                                                                            <tr>
+
+                                                                                <td>Итого:</td>
+                                                                                <td class="tg-baqh" ng-repeat="x in allSumArrH">{{x.toFixed(3)}}</td>
+
+                                                                            </tr>
+
+                                                                            </tfoot>
+
+
+                                                                        </table>
+
+
+
+
+
+                                                                    </div>
+
+                                                                </div>
+
+
+
+
+
+
+
+                                                            </md-card-title-text>
+
+
+
+                                                        </md-card-title>
+
+                                                    </md-card>
+
+
+
+
+
+
+
+
+
+                                                </div>
+
+
+
+
                                             </div>
 
                                         </div>
@@ -634,6 +1287,34 @@
                                 <md-tab label="Информация о текущем пользовании общедомовым имуществом">
                                     <md-content class="md-padding">
 
+
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <md-card>
+                                                    <md-card-title>
+                                                        <md-card-title-text>
+
+                                                            <h6 style="font-weight: normal">Площадь не жилых помещений для сдачи в аренду: 240 кв.м.</h6>
+                                                            <h6 style="font-weight: normal">Площадь подвального помещения для сдачи в аренду: 600 кв.м.</h6>
+                                                            <h6 style="font-weight: normal">Площадь технического этажа для сдачи в аренду: 350 кв.м.</h6>
+                                                            <h6 style="font-weight: normal">Площадь стен для аренды рекламных стендов в подъездах: 35 кв.м.</h6>
+                                                            <h6 style="font-weight: normal">Площадь аренды для наружных реклам: 80 кв.м.</h6>
+                                                            <h6 style="font-weight: normal">Площадь придомовой территории для сдачи в аренду: 20 кв.м.</h6>
+
+
+
+                                                        </md-card-title-text>
+
+
+
+                                                    </md-card-title>
+
+
+
+                                                </md-card>
+                                            </div>
+                                        </div>
 
 
 
