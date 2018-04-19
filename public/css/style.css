@@ -224,7 +224,9 @@ header#masthead-pro h1 {
     font-size: 5px;
     margin: 0 35px 0 0;
     padding: 0;
-    float: left
+    float: left;
+    position: relative;
+    top: 25px;
 }
 
 .btn-header-pro {
@@ -4598,14 +4600,14 @@ li.flex-active-slide.progression_studios_animate_right .progression-studios-slid
 .top__bar{
 
     position: relative;
-    top: 40px;
+    top: 5px;
     height: 0;
+    left: 468px;
 }
 
 .sf-menu > li:last-child > ul ul {
     left: auto; // reset the default positioning
 right: 100%; // this makes the submenu fly out to the left
 }
-
 
 

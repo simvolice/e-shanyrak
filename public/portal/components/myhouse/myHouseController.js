@@ -244,6 +244,56 @@ angular.module('app').controller('MyHouseCtrl', function ($scope, $mdDialog, $md
     };
 
 
+    setTimeout(function () {
+
+
+
+
+
+
+
+
+        bb.generate({
+            data: {
+
+                columns: [
+
+                    ["Собранная сумма, в тенге", 900000, 1700000, 2500000, 0, 0, 0, 0, 0],
+                    ["Планируемая для сбора сумма, в тенге", 3666666.67, 6416666.67, 9166666.67, 11916666.67, 14666666.67, 17416666.67, 20166666.67, 22916666.67],
+
+                ]
+            },
+            axis: {
+                x: {
+                    type: "category",
+                    categories: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
+                }
+            },
+
+            tooltip: {
+                format: {
+
+                    value: function (value, ratio, id) {
+                        return d3.format(",.2f")(value);
+                    }
+
+                }
+
+            },
+
+            grid: {
+                y: {
+                    show: true,
+
+                }
+            },
+            bindto: "#chartprognoz"
+        });
+
+    }, 350)
+
+
+
 
 });
 

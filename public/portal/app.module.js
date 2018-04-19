@@ -76,6 +76,24 @@ app.filter('ruFormat', function() {
 });
 
 
+var locale = {
+    "decimal": ",",
+    "thousands": "\u00A0",
+    "grouping": [3],
+    "currency": ["", " тнг."],
+    "dateTime": "%A, %e %B %Y г. %X",
+    "date": "%d.%m.%Y",
+    "time": "%H:%M:%S",
+    "periods": ["AM", "PM"],
+    "days": ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"],
+    "shortDays": ["вс", "пн", "вт", "ср", "чт", "пт", "сб"],
+    "months": ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"],
+    "shortMonths": ["янв", "фев", "мар", "апр", "май", "июн", "июл", "авг", "сен", "окт", "ноя", "дек"]
+};
+
+
+d3.formatDefaultLocale(locale);
+
 
 
 
@@ -93,10 +111,13 @@ app.controller('MainCtrl', function ($scope, $state, $timeout, $translate, $root
     $scope.arrRole = [];
 
     let arrMenuForRolesUser = [
+        {state: "myflat", title: "Моя квартира", icon: "fa-tv"},
+
+
 
         {state: "myhouse", title: "Мой дом", icon: "fa-home"},
 
-        {state: "myflat", title: "Моя квартира", icon: "fa-tv"},
+
 
         {state: "housemanage", title: "Управление домом", icon: "fa-gavel"},
 
