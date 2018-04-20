@@ -137,6 +137,43 @@
                                     </md-input-container>
 
 
+                                    <md-input-container class="md-block">
+                                        <label>Текст заявки</label>
+                                        <textarea ng-model="text" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+                                    </md-input-container>
+
+
+
+
+                                        <input type="file">
+
+
+                                    <md-checkbox ng-model="data.cb1" aria-label="Оповещать о ходе работы по заявке" style="margin-top: 20px">
+                                        Оповещать о ходе работы по заявке
+                                    </md-checkbox>
+
+
+
+
+
+                                    <div class="row">
+                                        <div class="col-md-2">
+
+                                            <md-button class="md-button md-raised md-primary">Отправить</md-button>
+
+                                        </div>
+
+                                        <div class="col-md-2">
+
+                                            <md-button class="md-button md-raised md-primary">Отмена</md-button>
+
+                                        </div>
+
+                                    </div>
+
+
+
+
                                 </md-card>
 
 
