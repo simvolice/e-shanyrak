@@ -10,6 +10,21 @@ angular.module('app').controller('MyHouseCtrl', function ($scope, $mdDialog, $md
 
     $scope.dateNow = moment().format("LL");
 
+    function summArr(arr) {
+        if (arr.length === 0){
+
+            return 0;
+
+        } else {
+
+
+
+            let [firstElem, ...restElem] = arr;
+
+            return firstElem + summArr(restElem);
+
+        }
+    }
 
 
 
@@ -37,13 +52,20 @@ angular.module('app').controller('MyHouseCtrl', function ($scope, $mdDialog, $md
         .then(function successCallback(response) {
 
 
-
+            let dataQ = [];
 
 
             $scope.resultFromDbLast = response.data.resultFromDb;
 
 
-            $scope.qlast = $scope.resultFromDbLast.aaData[0].q;
+
+
+            for (const itemArr of $scope.resultFromDbLast.aaData) {
+                dataQ.push(Number.parseFloat(itemArr.q.replace(",", ".")));
+
+            }
+
+            $scope.qlast  = summArr(dataQ).toFixed(3);
             $scope.t1last = $scope.resultFromDbLast.aaData[0].t1;
             $scope.t2last = $scope.resultFromDbLast.aaData[0].t2;
             $scope.m1last = $scope.resultFromDbLast.aaData[0].m1;
@@ -78,21 +100,6 @@ $scope.dateFromChange = function () {
 
 };
 
-    function summArr(arr) {
-        if (arr.length === 0){
-
-            return 0;
-
-        } else {
-
-
-
-            let [firstElem, ...restElem] = arr;
-
-            return firstElem + summArr(restElem);
-
-        }
-    }
 
 
 
