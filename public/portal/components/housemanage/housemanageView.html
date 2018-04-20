@@ -116,17 +116,26 @@
 
 
                                 <md-card>
-                                    <md-card-title>
-                                        <md-card-title-text>
-
-                                            <span class="md-subhead">Аналитика по заявкам (количество заявок, статус исполнения по заявкам)</span>
-
-
-                                        </md-card-title-text>
+                                    <md-input-container class="md-block" flex-gt-sm>
+                                        <label>Наименование заявки</label>
+                                        <input ng-model="data.nameContract">
+                                    </md-input-container>
 
 
 
-                                    </md-card-title>
+
+
+                                    <md-input-container>
+                                        <label>Выберите тип заявки</label>
+
+                                        <md-select ng-model="selectZayvka">
+
+                                            <md-option ng-repeat="y in allZayvka" ng-value="y.id">
+                                                {{y.name}}
+                                            </md-option>
+                                        </md-select>
+                                    </md-input-container>
+
 
                                 </md-card>
 

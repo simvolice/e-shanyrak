@@ -8,16 +8,10 @@ angular.module('app').controller('MyHouseCtrl', function ($scope, $mdDialog, $md
 
 
 
-    $scope.dateNow = moment().subtract(2, "days").format("LL");
+    $scope.dateNow = moment().format("LL");
 
 
 
-    $scope.dataLast = {
-
-        dateFrom: new Date(),
-        dateTo: new Date()
-
-    };
 
 
     $scope.data = {
@@ -31,8 +25,8 @@ angular.module('app').controller('MyHouseCtrl', function ($scope, $mdDialog, $md
 
     let request = {
         method: 'POST',
-        url: '/getdata',
-        data: {dateFrom: $scope.dataLast.dateFrom.setDate($scope.dataLast.dateFrom.getDate() - 2), dateTo: $scope.dataLast.dateTo.setDate($scope.dataLast.dateTo.getDate() - 2)}
+        url: '/getdatahoure',
+        data: $scope.data
 
 
     };
