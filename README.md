@@ -3,3 +3,4 @@
 
 
 Конракт на серваке: 0x72D0b9AE42c1037063914f8634FcFf7D401FdBb0
+RPC адрес на серваке: https://rpc.e-shaniraq.kz

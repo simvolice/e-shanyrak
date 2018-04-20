@@ -1,0 +1,104 @@
+<md-dialog class="fullscreen-dialog" aria-label="Создать смарт - договор">
+
+
+
+
+
+
+
+        <md-toolbar class="md-toolbar-tools">
+
+                <h2 style="color: white">Просмотр данных смарт - договора</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="closeDialogOnly()" aria-label="Отмена">
+                    <i class="fa fa-window-close"></i>
+                </md-button>
+
+        </md-toolbar>
+
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+
+
+                <div class="row">
+
+
+
+                    <div class="col-md-12" style="padding-left: 35%">
+
+
+                        <h5 style="text-decoration: underline">Информация о смарт - договоре</h5>
+
+                        <h6>Имя смарт - договора: {{data.name_contract}}</h6>
+
+
+                        <h6>Наименование услуги: {{data.name_uslugi}}</h6>
+
+                        <h6>Номер договора: {{data.number_contract}}</h6>
+
+
+
+                        <h5 style="text-decoration: underline">Реквизиты заказчика:</h5>
+
+
+
+                             <h6>ФИО заказчика: {{data.fio_zakazchika}}</h6>
+                             <h6>Адрес заказчика: {{data.address_zakazchika}}</h6>
+                        <h6>ИИН удостоверения личности: {{data.iin_udv_zakazchika}}</h6>
+                        <h6>Орган выдачи: {{data.udv_create_org}}</h6>
+                             <h6>Дата выдачи: {{data.udv_create_date}}</h6>
+                             <h6>Номер удостоверения личности: {{data.udv_number}}</h6>
+
+
+                        <h5 style="text-decoration: underline">Реквизиты исполнителя:</h5>
+
+                             <h6>Наименование организации: {{data.name_org}}</h6>
+                             <h6>Адрес организации: {{data.address_org}}</h6>
+                             <h6>БИН организации: {{data.bin_ispolnitel}}</h6>
+                             <h6>Наименование банка: {{data.bank_name_org}}</h6>
+                             <h6>ИИК: {{data.iik_ispolnitel}}</h6>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </md-dialog-content>
+
+
+
+
+    <md-dialog-actions layout="row">
+
+
+
+        <md-button class="md-raised md-primary" ng-click="writeOk()" aria-label="Отмена">
+            Подписать
+        </md-button>
+
+        <md-button class="md-raised md-primary" ng-click="closeDialog()" aria-label="Отмена">
+            Отказать
+        </md-button>
+
+        <md-button class="md-raised md-primary" ng-click="closeDialogOnly()" aria-label="Отмена">
+            Закрыть
+        </md-button>
+        <span flex></span>
+
+
+
+
+    </md-dialog-actions>
+
+
+
+</md-dialog>

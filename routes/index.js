@@ -425,4 +425,27 @@ router.post('/getdatahoure', async (req, res, next) =>{
 
 
 
+router.post('/setstatustransactionhash', async (req, res, next) =>{
+
+    let result = await TransactionService.setStatusTransaction(req.body);
+
+
+    res.json({"code": 0});
+
+
+});
+
+
+router.get('/getwaters', async (req, res, next) =>{
+
+
+    let result = await request.get("http://91.207.40.18:8080/impulse/get?command=20");
+    let resultClean = JSON.parse(result);
+
+
+    res.json({"code": 0, "resultFromDb": resultClean});
+
+});
+
+
 module.exports = router;

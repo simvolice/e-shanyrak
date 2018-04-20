@@ -1,4 +1,4 @@
-<div class="row" ng-controller="HomePageCtrl">
+<div class="row" ng-controller="maincontractkskCtrl">
 
 
 
@@ -20,8 +20,6 @@
                 <div class="col-md-12 table-responsive">
 
 
-                    <md-button class="md-raised md-primary" ng-click="newContract($event)">Создать смарт - договор</md-button>
-
 
                     <style type="text/css">
                         .tg  {border-collapse:collapse;border-spacing:0; width: 98.7%; margin-left: 8px;}
@@ -40,9 +38,7 @@
                             <th class="tg-hgcj">Дата заключения</th>
                             <th class="tg-hgcj">Хэш транзакции</th>
 
-
                             <th class="tg-hgcj">Статус договора</th>
-
                             <th class="tg-hgcj">Просмотреть данные договора</th>
                             <th class="tg-hgcj">Скачать договор</th>
                             <th class="tg-hgcj">Разорвать договор</th>
@@ -72,10 +68,12 @@
 
                             <td class="tg-baqh" style="word-break: break-all;
     width: 470px;">{{data.transactionHash}}</td>
+
+
                             <td class="tg-baqh">{{data.statusTx}}</td>
 
 
-                            <td class="tg-baqh"><i class="fa fa-eye" ng-click="view(data.transactionHash, $event)" style="cursor: pointer"></i></td>
+                            <td class="tg-baqh"><i class="fa fa-eye" ng-click="view(data, $event)" style="cursor: pointer"></i></td>
                             <td class="tg-baqh"><i class="fa fa-download" style="cursor: pointer"></i></td>
                             <td class="tg-baqh"><i class="fa fa-window-close" style="cursor: pointer"></i></td>
 

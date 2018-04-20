@@ -185,4 +185,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 
       })
+
+      .state('maincontractksk', {
+          url: '/maincontractksk',
+          templateUrl: 'components/maincontractksk/mainView.html',
+
+
+      })
 });

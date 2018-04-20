@@ -34,6 +34,8 @@ module.exports = {
                     nameContract: objParams.nameContract,
                     blockNumber: objParams.blockNumber,
 
+                    statusTx: "В ожидании",
+
 
 
                     createAt: new Date( new Date().getTime() -  ( new Date().getTimezoneOffset() * 60000 ) ),
@@ -76,19 +78,50 @@ module.exports = {
 
 
 
-            let result = await col.find({
+            let result = await col.find({}).project({userId: 0}).toArray();
 
 
 
 
-                    userId: ObjectId(jsonwebtoken.verify(objParams.sessionToken, process.env.SECRETJSONWEBTOKEN))
+            return result;
+
+
+        }catch(err) {
+
+
+
+            return err;
+
+
+        }
 
 
 
 
+
+    },
+
+
+    setStatusTransaction: async (objParams) => {
+        try {
+
+
+
+            const col = dbConnect.getConnect().collection('transactions');
+
+
+
+            let result = await col.updateOne({_id: ObjectId(objParams.id)},{
+
+                $set: {
+
+
+                    statusTx: objParams.status
 
                 }
-            ).project({ _id: 0, userId: 0}).toArray();
+
+
+            });
 
 
 
@@ -110,6 +143,8 @@ module.exports = {
 
 
     }
+
+
 
 
 

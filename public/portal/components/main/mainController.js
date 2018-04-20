@@ -6,7 +6,7 @@
 
 angular.module('app').controller('HomePageCtrl', function ($scope, $mdDialog, $mdToast, AddTransactionHash, GetAllTransactionHash, $rootScope) {
 
-    var web3 = new Web3('https://rpc.e-shaniraq.kz');
+    var web3 = new Web3('http://localhost:8545');
 
     const testABI = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"propforsaves","outputs":[{"name":"jsStringifyObject","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_address","type":"address"}],"name":"getDatajsStringifyObject","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_address","type":"address"},{"name":"_jsStringifyObject","type":"string"}],"name":"setDatajsStringifyObject","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}];
     abiDecoder.addABI(testABI);
@@ -226,7 +226,7 @@ angular.module('app').controller('HomePageCtrl', function ($scope, $mdDialog, $m
 
 
             //TODO Всегда надо диплоить контракт, чтобы забрать адрес
-            var newContractInstance = new web3.eth.Contract([{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"propforsaves","outputs":[{"name":"jsStringifyObject","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_address","type":"address"}],"name":"getDatajsStringifyObject","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_address","type":"address"},{"name":"_jsStringifyObject","type":"string"}],"name":"setDatajsStringifyObject","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}], "0x72D0b9AE42c1037063914f8634FcFf7D401FdBb0", {
+            var newContractInstance = new web3.eth.Contract([{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"propforsaves","outputs":[{"name":"jsStringifyObject","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_address","type":"address"}],"name":"getDatajsStringifyObject","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_address","type":"address"},{"name":"_jsStringifyObject","type":"string"}],"name":"setDatajsStringifyObject","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}], "0x9a0a7fc24D43b5242af33d42B2401Fef0b7c2cf2", {
                 from: web3.eth.defaultAccount,
                 gasPrice: '0',
                 gas: 1500000,
