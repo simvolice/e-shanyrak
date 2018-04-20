@@ -138,7 +138,8 @@ app.controller('MainCtrl', function ($scope, $state, $timeout, $translate, $root
         {state: "mainksk", title: "Информация о кск", icon: "fa-file-alt"},
         {state: "budgetksk", title: "Бюджет", icon: "fa-database"},
         {state: "planksk", title: "План работ", icon: "fa-database"},
-      /*  {state: "messageksk", title: "Сообщения", icon: "fa-database"},*/
+        {state: "main", title: "Смарт договор", icon: "fa-file-alt"},
+        // contractksk
         {state: "serviceksk", title: "Услуги", icon: "fa-database"}
 
 
